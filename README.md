@@ -13,7 +13,7 @@ Naším cílem je vytvořit webovou aplikaci pro sdílení maturitních materiá
    - Odhlášení
    - Věci výše budou odkazy na okraji stránky, hlavním obsahem pak budou nejnovější příspěvky od všech uživatelů
  - Profil uživatele by měl mít možnost nastavení:
-  - Profilového obrázku ?
+   - Profilového obrázku ?
    - Změny přezdívky
    - V případě použití účtu který není od třetích stran i změny hesla, samozřejmě podmíněného potvrzením přes mail
 - Jednotlivé obory materiálů by měly být:
