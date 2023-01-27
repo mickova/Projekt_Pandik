@@ -1,7 +1,7 @@
 # Projekt_Pandik
-## Aneb náš WA projekt, kde jsme mega lucky že jsme spolu
+Aneb náš WA projekt, kde jsme mega lucky že jsme spolu.
 
-### Naším cílem je vytvořit webovou aplikaci pro sdílení maturitních materiálů a ověřených zdrojů
+Naším cílem je vytvořit webovou aplikaci pro sdílení maturitních materiálů a ověřených zdrojů.
 
 ## Nástřel jak by to mělo vypadat
 - Uživatele přivítá úvodní stránka s krátkými informacemi o projektu, mělo by tam být nějaké info o tématech kjterým se sdílení věnuje, aby uživatel věděl jestli se registrovat. Homepage bude obsahovat odkaz pro přihlášení i registraci.
@@ -24,3 +24,13 @@
 - Odhlášení by taky mělo být blbuvzdorné, přesměruje na homepage pro nepřihlášené
 - Uživatel by měl mít možnost se podívat na profil autora prohlíženého materiálu
    - Tento profil by měl zobrazovat všechny příspěvky autora
+
+## Jak zpracovat Issue?
+- Název velmi stručný (Design pro homepage, Nefungující odkazy, Problém s přihlášení)
+- Následně v obsahu začneme nadpisem pomocí "#", ve kterém popíšeme trochu více (Potřeba vytvoření desingu pro přivítací stránku, Odkazy na stránce přivítání nefungují, přihlášení v případě nového uživatele nefunguje)
+- Pokud se jedná jenom o úkol, napište "###", což je třetí největší nadpis, a vložte "Úkoly". Cokoliv jiného napište podobně (### Požadavky, ### Poznámky)
+- **Vše začíná velkým písmenem!**
+   - Kdo napíše nadpis stylem "udělat nové přihlášení", bude souzen za zločiny proti lidskosti
+- Úkoly jako tlačítka (checkbox) uděláte následovně: <code> - [ ] </code>
+- Používejte slovesa, takže žádné "Api", ale "Vytvořte api"
+- Přiřazujte v postranním menu labely
