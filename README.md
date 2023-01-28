@@ -4,7 +4,7 @@ Aneb náš WA projekt, kde jsme mega lucky že jsme spolu.
 Naším cílem je vytvořit webovou aplikaci pro sdílení maturitních materiálů a ověřených zdrojů.
 
 ## Nástřel jak by to mělo vypadat
-- Uživatele přivítá úvodní stránka s krátkými informacemi o projektu, mělo by tam být nějaké info o tématech kjterým se sdílení věnuje, aby uživatel věděl jestli se registrovat. Homepage bude obsahovat odkaz pro přihlášení i registraci.
+- Uživatele přivítá úvodní stránka s krátkými informacemi o projektu, mělo by tam být nějaké info o tématech kterým se sdílení věnuje, aby uživatel věděl jestli se registrovat. Homepage bude obsahovat odkaz pro přihlášení i registraci.
 - Přihlášení a registraci nemusím dlouze popisovat. Přihlášení by mělo obsahovat odkaz pro případ zapomenutí hesla a vyřešení toho problému. Po registraci by měl systém vyžadovat ověření emailu než pustí nového uživatele dál. Pro fajnšmekry je i autentizace pomocí třetích stran.
 - Po přihlášení by měl být uživatel přesměrován na "úvodní stránku" přihlášených, odkud budou odkazy na:
    - Jeho profil
