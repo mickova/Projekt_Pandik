@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b23c99862d93a2dff47f46e80d8cb15be9b73121',
+        'reference' => 'b54ff56a8d46e36725ec069041c9bcfbdec7979a',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b23c99862d93a2dff47f46e80d8cb15be9b73121',
+            'reference' => 'b54ff56a8d46e36725ec069041c9bcfbdec7979a',
             'dev_requirement' => false,
         ),
         'doctrine/cache' => array(
@@ -172,6 +172,15 @@
             'reference' => 'dd19fe8e07cc3f374308565667eecd4958c22106',
             'dev_requirement' => false,
         ),
+        'nikic/php-parser' => array(
+            'pretty_version' => 'v4.15.3',
+            'version' => '4.15.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/php-parser',
+            'aliases' => array(),
+            'reference' => '570e980a201d8ed0236b0a62ddf2c9cbb2034039',
+            'dev_requirement' => true,
+        ),
         'ocramius/proxy-manager' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -251,6 +260,15 @@
             'install_path' => __DIR__ . '/../symfony/apache-pack',
             'aliases' => array(),
             'reference' => '3aa5818d73ad2551281fc58a75afd9ca82622e6c',
+            'dev_requirement' => false,
+        ),
+        'symfony/asset' => array(
+            'pretty_version' => 'v6.2.5',
+            'version' => '6.2.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/asset',
+            'aliases' => array(),
+            'reference' => '925ca9e357159b5ceeb3c4451362f0a183414162',
             'dev_requirement' => false,
         ),
         'symfony/cache' => array(
@@ -426,6 +444,15 @@
             'aliases' => array(),
             'reference' => '74f2e638ec3fa0315443bd85fab7fc8066b77f83',
             'dev_requirement' => false,
+        ),
+        'symfony/maker-bundle' => array(
+            'pretty_version' => 'v1.48.0',
+            'version' => '1.48.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/maker-bundle',
+            'aliases' => array(),
+            'reference' => '2e428e8432e9879187672fe08f1cc335e2a31dd6',
+            'dev_requirement' => true,
         ),
         'symfony/options-resolver' => array(
             'pretty_version' => 'v6.2.5',

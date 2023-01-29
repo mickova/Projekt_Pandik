@@ -12,17 +12,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\SecurityBundle\Security;
 
-class WelcomePageController extends AbstractController
+class LogoutController extends AbstractController
 {
 
-   #[Route('/', name: "welcome_page", methods: ['GET', 'POST'])]
-   public function homepage(AuthenticationUtils $auth, ManagerRegistry $doctrine, Security $security, Request $request)
+   #[Route('/logout', name: "logout", methods: ['GET', 'POST'])]
+   public function logout()
    {
-      $form = $this->createForm(LoginFormType::class);
-      $form->handleRequest($request);
-
-      return $this->render('html/welcome.html.twig', [
-         'LoginForm' => $form->createView(),
-      ]);
+      return $this->redirect("/login");
    }
 }

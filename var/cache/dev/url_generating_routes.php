@@ -4,5 +4,9 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
-    'homepage' => [[], ['_controller' => 'App\\Controller\\WelcomePageController::homepage'], [], [['text', '/']], [], [], []],
+    'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::homepage'], [], [['text', '/homepage']], [], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::new'], [], [['text', '/login']], [], [], []],
+    'logout' => [[], ['_controller' => 'App\\Controller\\LogoutController::logout'], [], [['text', '/logout']], [], [], []],
+    'register' => [[], ['_controller' => 'App\\Controller\\UserController::test'], [], [['text', '/register']], [], [], []],
+    'welcome_page' => [[], ['_controller' => 'App\\Controller\\WelcomePageController::homepage'], [], [['text', '/']], [], [], []],
 ];

@@ -12,16 +12,16 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\SecurityBundle\Security;
 
-class WelcomePageController extends AbstractController
+class HomePageController extends AbstractController
 {
 
-   #[Route('/', name: "welcome_page", methods: ['GET', 'POST'])]
+   #[Route('/homepage', name: "homepage", methods: ['GET', 'POST'])]
    public function homepage(AuthenticationUtils $auth, ManagerRegistry $doctrine, Security $security, Request $request)
    {
       $form = $this->createForm(LoginFormType::class);
       $form->handleRequest($request);
 
-      return $this->render('html/welcome.html.twig', [
+      return $this->render('html/homepage.html.twig', [
          'LoginForm' => $form->createView(),
       ]);
    }
