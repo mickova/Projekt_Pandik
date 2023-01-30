@@ -1,4 +1,4 @@
+vendor
+
 var/cache
 var/cache/dev
-
-vendor
