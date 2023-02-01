@@ -29,6 +29,7 @@ security:
 
   access_control:
     - { path: ^/homepage, roles: ROLE_USER }
+    - { path: ^/profile/[0-9A-Za-z], roles: ROLE_USER }
 
 when@test:
   security:
