@@ -16,7 +16,7 @@ class LoginFormController extends AbstractController
 {
 
    #[Route('/login', name: "login", methods: ['GET', 'POST'])]
-   public function new(AuthenticationUtils $auth, ManagerRegistry $doctrine, Security $security, Request $request)
+   public function new(Request $request)
    {
       $form = $this->createForm(LoginFormType::class);
       $form->handleRequest($request);

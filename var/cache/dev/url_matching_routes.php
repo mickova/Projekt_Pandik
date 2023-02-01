@@ -11,7 +11,7 @@ return [
         '/homepage' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomePageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginFormController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\LogoutController::logout'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\UserController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegisterFormController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'welcome_page', '_controller' => 'App\\Controller\\WelcomePageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
