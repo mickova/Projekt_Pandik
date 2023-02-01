@@ -11,7 +11,9 @@ return [
         '/homepage' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomePageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginFormController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\LogoutController::logout'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/profile' => [[['_route' => 'my_profile', '_controller' => 'App\\Controller\\ProfileController::my_profile'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegisterFormController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/settings' => [[['_route' => 'settings', '_controller' => 'App\\Controller\\SettingFormController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'welcome_page', '_controller' => 'App\\Controller\\WelcomePageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
@@ -23,7 +25,7 @@ return [
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         59 => [
-            [['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::logout'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+            [['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::profile'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

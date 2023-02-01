@@ -27,6 +27,7 @@ class RegisterFormController extends AbstractController
          $hashedPassword = $passwordHasher->hashPassword($user, $plaintextPassword);
          $user->setPassword($hashedPassword);
          $user->setUsername($data["username"]);
+         $user->setDescription("Vítejte na mém profilu");
          $entityManager->persist($user);
          $entityManager->flush($user);
          return $this->redirect("/homepage");
