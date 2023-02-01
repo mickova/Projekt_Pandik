@@ -7,6 +7,6 @@ return [
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::homepage'], [], [['text', '/homepage']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::new'], [], [['text', '/login']], [], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\LogoutController::logout'], [], [['text', '/logout']], [], [], []],
-    'register' => [[], ['_controller' => 'App\\Controller\\UserController::test'], [], [['text', '/register']], [], [], []],
+    'register' => [[], ['_controller' => 'App\\Controller\\RegisterFormController::test'], [], [['text', '/register']], [], [], []],
     'welcome_page' => [[], ['_controller' => 'App\\Controller\\WelcomePageController::homepage'], [], [['text', '/']], [], [], []],
 ];
