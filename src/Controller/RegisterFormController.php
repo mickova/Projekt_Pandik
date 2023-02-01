@@ -28,6 +28,7 @@ class RegisterFormController extends AbstractController
          $user->setPassword($hashedPassword);
          $user->setUsername($data["username"]);
          $entityManager->persist($user);
+         $entityManager->flush($user);
          return $this->redirect("/homepage");
       }
       return $this->render("html/register.html.twig", [
