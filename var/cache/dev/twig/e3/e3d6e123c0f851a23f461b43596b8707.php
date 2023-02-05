@@ -110,6 +110,6 @@ class __TwigTemplate_4a1f6914cd0ab6903a2a8ea9a54f7fcd extends Template
     <a>Registrace</a> 
   </div>
 </body>
-</html>", "html/welcome.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\welcome.html.twig");
+</html>", "html/welcome.html.twig", "E:\\Škola\\WA\\OH_VELKY_PROJEKT\\Projekt_Pandik\\templates\\html\\welcome.html.twig");
     }
 }
