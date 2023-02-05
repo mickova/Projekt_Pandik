@@ -13,17 +13,21 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\SecurityBundle\Security;
 
-class HomePageController extends AbstractController
+class MaterialPageController extends AbstractController
 {
 
-   #[Route('/homepage', name: "homepage", methods: ['GET', 'POST'])]
-   public function homepage(AuthenticationUtils $auth, ManagerRegistry $doctrine, Security $security, Request $request)
+   #[Route('/all_materials', name: "materials", methods: ['GET', 'POST'])]
+   public function homepage(ManagerRegistry $doctrine, Security $security, Request $request)
    {
       $form = $this->createForm(LoginFormType::class);
       $form->handleRequest($request);
+      $m1 = new MaterialRepository($doctrine);
+
+      $material_array = $m1->createQueryBuilder($doctrine)->getQuery("")->getResult();
       
-      return $this->render('html/homepage.html.twig', [
+      return $this->render('html/all_materials.html.twig', [
          'LoginForm' => $form->createView(),
+         'materials' => $material_array
       ]);
    }
 }

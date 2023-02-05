@@ -7,6 +7,7 @@ return [
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::homepage'], [], [['text', '/homepage']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::new'], [], [['text', '/login']], [], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\LogoutController::logout'], [], [['text', '/logout']], [], [], []],
+    'material' => [[], ['_controller' => 'App\\Controller\\MaterialPageController::logout'], [], [['text', '/material']], [], [], []],
     'profile' => [['name'], ['_controller' => 'App\\Controller\\ProfileController::profile'], [], [['variable', '/', '[^/]++', 'name', true], ['text', '/profile']], [], [], []],
     'my_profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::my_profile'], [], [['text', '/profile']], [], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\RegisterFormController::test'], [], [['text', '/register']], [], [], []],
