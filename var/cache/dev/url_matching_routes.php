@@ -11,6 +11,8 @@ return [
         '/homepage' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomePageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginFormController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\LogoutController::logout'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/material' => [[['_route' => 'material', '_controller' => 'App\\Controller\\MaterialFormController::material'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/all_materials' => [[['_route' => 'materials', '_controller' => 'App\\Controller\\MaterialPageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profile' => [[['_route' => 'my_profile', '_controller' => 'App\\Controller\\ProfileController::my_profile'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegisterFormController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/settings' => [[['_route' => 'settings', '_controller' => 'App\\Controller\\SettingFormController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
