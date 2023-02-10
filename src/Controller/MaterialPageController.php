@@ -2,32 +2,64 @@
 // src/Controller/HelloWorldController.php
 namespace App\Controller;
 
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use App\Form\Type\LoginFormType;
-use App\Repository\MaterialRepository;
+use App\Entity\Material;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\SecurityBundle\Security;
+use App\Form\Type\All_MaterialFormType;
+use App\Form\Type\DatePickerFormType;
+use DateTime;
 
 class MaterialPageController extends AbstractController
 {
 
-   #[Route('/all_materials', name: "materials", methods: ['GET', 'POST'])]
+   private $materialRepository;
+
+   #[Route('/all_materials', name: "all_materials", methods: ['GET', 'POST'])]
    public function homepage(ManagerRegistry $doctrine, Security $security, Request $request)
    {
-      $form = $this->createForm(LoginFormType::class);
+      $subject = "reset";
+      $form = $this->createForm(All_MaterialFormType::class);
       $form->handleRequest($request);
-      $m1 = new MaterialRepository($doctrine);
 
-      $material_array = $m1->createQueryBuilder($doctrine)->getQuery("")->getResult();
+      $this->materialRepository = $doctrine->getRepository(Material::class);
       
+      /**
+       * Pokud hledáme pouze předmět
+       */
+      if ($form->isSubmitted() && $form->isValid()) {
+         $data = $form->getData();
+         $subject = $data["school_subject"];
+         $date1 = $data["date1"];
+         $date2 = $data["date2"];
+         /**
+          * Pokud jsou předměty všechny
+          */
+         if (strcmp($subject, "reset") === 0) {
+            return $this->render('html/all_materials.html.twig', [
+               'materials' => $this->materialRepository,
+               'choice_form' => $form->createView(),
+               'subject' => $subject,
+               'date1' => $date1,
+               'date2'=> $date2
+            ]);
+         }
+         $view =  $form->createView();
+         unset($form->getData()["school_subject"]);
+         return $this->render('html/all_materials.html.twig', [
+            'materials' => $this->materialRepository,
+            'choice_form' => $view,
+            'subject' => $subject,
+            'date1' => $date1,
+            'date2' => $date2
+         ]);
+      }
+
       return $this->render('html/all_materials.html.twig', [
-         'LoginForm' => $form->createView(),
-         'materials' => $material_array
+         'materials' => $this->materialRepository,
+         'choice_form' => $form->createView(),
       ]);
    }
 }

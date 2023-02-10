@@ -27,7 +27,8 @@ class MaterialFormController extends AbstractController
          $material = new Material();
          $material->setUser($user);
          $material->setContent($data["content"]);
-         $material->setSubject($data["subject"]);
+         $material->setSchoolSubject($data["subject"]);
+         $material->setDate();
          $entityManager->persist($material);
          $entityManager->flush($user);
          return $this->redirect("/homepage");

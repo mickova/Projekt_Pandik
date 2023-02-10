@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</parameter>
+    <parameter key="kernel.project_dir">C:\Users\Matyáš\Desktop\ProjectPandik</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\log</parameter>
+    <parameter key="kernel.build_dir">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\Matyáš\Desktop\ProjectPandik\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
@@ -18,27 +18,27 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\Users\Matyáš\Desktop\ProjectPandik\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\Users\Matyáš\Desktop\ProjectPandik\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
     </parameter>
@@ -79,15 +79,15 @@
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
-    <parameter key="router.cache_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev</parameter>
+    <parameter key="router.cache_dir">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="cache.prefix.seed">_E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik.App_KernelDevDebugContainer</parameter>
+    <parameter key="cache.prefix.seed">_C:\Users\Matyáš\Desktop\ProjectPandik.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -96,7 +96,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -105,7 +105,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/templates</parameter>
+    <parameter key="twig.default_path">C:\Users\Matyáš\Desktop\ProjectPandik/templates</parameter>
     <parameter key="doctrine.dbal.configuration.class">Doctrine\DBAL\Configuration</parameter>
     <parameter key="doctrine.data_collector.class">Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector</parameter>
     <parameter key="doctrine.dbal.connection.event_manager.class">Symfony\Bridge\Doctrine\ContainerAwareEventManager</parameter>
@@ -170,7 +170,7 @@
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.enable_lazy_ghost_objects">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -256,6 +256,9 @@
       <call method="setContainer">
         <argument type="service" id=".service_locator.CshazM0.App\Controller\WelcomePageController"/>
       </call>
+    </service>
+    <service id="App\Form\Type\All_MaterialFormType" class="App\Form\Type\All_MaterialFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Form\Type\LoginFormType" class="App\Form\Type\LoginFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -348,7 +351,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/http_cache</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -358,7 +361,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -538,7 +541,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -571,7 +574,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -748,7 +751,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument>dev</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <call method="setName">
         <argument>debug:dotenv</argument>
       </call>
@@ -811,6 +814,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\Type\All_MaterialFormType</argument>
         <argument>App\Form\Type\LoginFormType</argument>
         <argument>App\Form\Type\MaterialFormType</argument>
         <argument>App\Form\Type\RegisterFormType</argument>
@@ -916,9 +920,9 @@
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>V1eHI3FqF5</argument>
+      <argument>IX87p5dqx0</argument>
       <argument>0</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/app</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -931,50 +935,50 @@
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>22a4R8mPvE</argument>
+      <argument>tFQiXbOct8</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>vpWk7ko0LW</argument>
+      <argument>kP5rYk3THj</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>YqRb+d3G-7</argument>
+      <argument>Uy0gjaPCKf</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>i7HxgKsQoY</argument>
+      <argument>Gs2VX9+mz5</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>0h68Diy-x-</argument>
+      <argument>+fanzjHP7J</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -984,7 +988,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1003,7 +1007,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/app</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -1599,7 +1603,7 @@
       <argument type="service" id=".service_locator.PvoQzFT.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev</argument>
+        <argument key="cache_dir">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1638,7 +1642,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1666,7 +1670,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString">
@@ -1675,7 +1679,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/.env.dev.local</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik/.env.dev.local</argument>
     </service>
     <service id="property_info" class="Symfony\Component\PropertyInfo\PropertyInfoExtractor">
       <argument type="iterator">
@@ -1749,7 +1753,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/sessions</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -1761,7 +1765,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/sessions</argument>
+          <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -1807,7 +1811,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.DugO2RV"/>
+      <argument type="service" id=".service_locator.WaBIUgr"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1896,7 +1900,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/twig</argument>
+        <argument key="cache">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -1972,9 +1976,9 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/templates</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik/templates</argument>
       <argument type="collection"/>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
@@ -1986,36 +1990,36 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
         <argument>DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
         <argument>!DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/templates</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik/templates</argument>
       </call>
       <call method="addPath">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -2041,7 +2045,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension">
@@ -2125,9 +2129,9 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/templates</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -2277,7 +2281,7 @@
       <argument type="service" id="doctrine.debug_data_holder"/>
       <argument type="service" id="debug.stopwatch" on-invalid="null"/>
     </service>
-    <service id=".1_ServiceLocator~NSBpLEI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~j8l4zla" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -2482,7 +2486,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2517,7 +2521,7 @@
     </service>
     <service id="doctrine.orm.default_attribute_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AttributeDriver">
       <argument type="collection">
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\src\Entity</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik\src\Entity</argument>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
@@ -2575,7 +2579,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/migrations</argument>
+        <argument>C:\Users\Matyáš\Desktop\ProjectPandik/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -2836,10 +2840,10 @@
     <service id="cache.security_expression_language" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>VMLvQge-0v</argument>
+      <argument>y5QvXw15Fy</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -2852,10 +2856,10 @@
     <service id="cache.security_is_granted_attribute_expression_language" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>Id-Sld1MNe</argument>
+      <argument>tlLE3WUxgz</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -2921,6 +2925,13 @@
         <argument>null</argument>
       </call>
       <call method="add">
+        <argument type="service" id=".security.request_matcher.FsQ6U.P"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
         <argument type="service" id=".security.request_matcher.PcAFzrj"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
@@ -2929,6 +2940,13 @@
       </call>
       <call method="add">
         <argument type="service" id=".security.request_matcher.V1andc_"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.aoiTd6y"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
         </argument>
@@ -3513,6 +3531,14 @@
         <argument type="service" id=".security.request_matcher.SYeVDa9"/>
       </argument>
     </service>
+    <service id=".security.request_matcher.92MUXM4" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/profile</argument>
+    </service>
+    <service id=".security.request_matcher.FsQ6U.P" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.92MUXM4"/>
+      </argument>
+    </service>
     <service id=".security.request_matcher.zGfM1.U" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
       <argument>^/setting</argument>
     </service>
@@ -3527,6 +3553,14 @@
     <service id=".security.request_matcher.V1andc_" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
         <argument type="service" id=".security.request_matcher.rqL_W.h"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.MId2uU." class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/themes</argument>
+    </service>
+    <service id=".security.request_matcher.aoiTd6y" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.MId2uU."/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
@@ -3547,8 +3581,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik/templates</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -3708,7 +3742,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>E:\Škola\WA\OH_VELKY_PROJEKT\Projekt_Pandik</argument>
+      <argument>C:\Users\Matyáš\Desktop\ProjectPandik</argument>
     </service>
     <service id="maker.maker.make_stimulus_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeStimulusController">
       <tag name="maker.command"/>
@@ -3740,6 +3774,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\WelcomePageController" class="App\Controller\WelcomePageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\WelcomePageController" class="App\Controller\WelcomePageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\WelcomePageController" class="App\Controller\WelcomePageController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\All_MaterialFormType" class="App\Form\Type\All_MaterialFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\Type\All_MaterialFormType" class="App\Form\Type\All_MaterialFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\LoginFormType" class="App\Form\Type\LoginFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\Type\LoginFormType" class="App\Form\Type\LoginFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\MaterialFormType" class="App\Form\Type\MaterialFormType" autowire="true" abstract="true"/>
@@ -4219,9 +4255,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.DugO2RV" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.WaBIUgr" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\Type\All_MaterialFormType" type="service_closure" id="App\Form\Type\All_MaterialFormType"/>
         <argument key="App\Form\Type\LoginFormType" type="service_closure" id="App\Form\Type\LoginFormType"/>
         <argument key="App\Form\Type\MaterialFormType" type="service_closure" id="App\Form\Type\MaterialFormType"/>
         <argument key="App\Form\Type\RegisterFormType" type="service_closure" id="App\Form\Type\RegisterFormType"/>
@@ -5187,7 +5224,7 @@
     <service id=".service_locator.dTaHD7m" alias=".service_locator.04rvWvA"/>
     <service id=".service_locator.t1Imjr9" alias=".service_locator.gLKJlzL"/>
     <service id=".service_locator.hX5Z8rP" alias=".service_locator.hVkMRTK"/>
-    <service id=".service_locator.NPIoTt7" alias=".service_locator.DugO2RV"/>
+    <service id=".service_locator.28Pjs58" alias=".service_locator.WaBIUgr"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>

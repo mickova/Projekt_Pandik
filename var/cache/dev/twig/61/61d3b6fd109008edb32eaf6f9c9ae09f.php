@@ -79,6 +79,6 @@ class __TwigTemplate_8d3d7ba99cc07251f2f7c4e19a363001 extends Template
 {{ form_widget(LoginForm) }}
 <button type=\"submit\" class=\"button\">Přihlásit!</button>
 {{ form_end(LoginForm) }}
-", "html/login.html.twig", "E:\\Škola\\WA\\OH_VELKY_PROJEKT\\Projekt_Pandik\\templates\\html\\login.html.twig");
+", "html/login.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\login.html.twig");
     }
 }

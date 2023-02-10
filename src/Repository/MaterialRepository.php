@@ -42,20 +42,67 @@ class MaterialRepository extends ServiceEntityRepository
     /**
      * @return Material[] Returns an array of Material objects
      */
-    public function getThreeNewestMaterials(): array
+    public function getAll()
     {
-        return $this->createQueryBuilder('SELECT * FROM Material where id=1')
-            ->getQuery()->getResult()
-        ;
+
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT m
+            FROM App\Entity\Material m'
+        );
+        // returns an array of Product objects
+        return $query->getSQL();
     }
 
-//    public function findOneBySomeField($value): ?Material
-//    {
-//        return $this->createQueryBuilder('m')
-//            ->andWhere('m.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    /**
+     * @return Material[] Returns an array of Material objects
+     */
+    public function getThreeNewest()
+    {
+
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT m
+            FROM App\Entity\Material m'
+        )->setMaxResults(3);
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+    public function getSubject($school_subject) {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            'SELECT m
+            FROM App\Entity\Material m 
+            where m.school_subject = ?1'
+        )->setParameter("1", $school_subject)->
+        setMaxResults(3);
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+    public function getSubjectBetweenDates($subject, $date1, $date2) {
+        $realdate1 = date("Y-m-d h:m:s",$date1);
+        $realdate2 = date("Y-m-d h:m:s",$date2);
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            "SELECT m
+            FROM App\Entity\Material m 
+            where (m.school_subject = ?1) and (m.date_of_upload BETWEEN '" . $realdate1 . "'  AND '" . $realdate2 ."')")->
+        setParameter("1", $subject);
+        return $query->getResult();
+    }
+
+    public function getEverythingBetweenDates($date1, $date2) {
+        $realdate1 = date("Y-m-d h:m:s",$date1);
+        $realdate2 = date("Y-m-d h:m:s",$date2);
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            "SELECT m
+            FROM App\Entity\Material m 
+            WHERE m.date_of_upload BETWEEN '" . $realdate1 . "'  AND '" . $realdate2 ."'");
+        return  $query->getResult();
+    }
 }

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\MaterialRepository;
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
+use DateTimeZone;
 
 #[ORM\Entity(repositoryClass: MaterialRepository::class)]
 class Material
@@ -17,10 +19,13 @@ class Material
     private User $user;
 
     #[ORM\Column(length: 4000)]
-    private ?string $subject = null;
+    private ?string $school_subject = null;
 
     #[ORM\Column(length: 4000)]
     private ?string $content = null;
+
+    #[ORM\Column(length: 4000)]
+    private DateTime $date_of_upload;
 
     public function getId(): ?int
     {
@@ -38,24 +43,37 @@ class Material
 
         return $this;
     }
-    
-    public function getSubject(): ?string
+
+    public function getSchoolSubject(): ?string
     {
-        return $this->subject;
+        return $this->school_subject;
     }
 
-    public function setSubject(string $subject): self
+    public function setSchoolSubject(string $school_subject): self
     {
-        $this->subject = $subject;
+        $this->school_subject = $school_subject;
 
         return $this;
     }
 
-    public function setUser(User $user) {
+    public function setUser(User $user)
+    {
         $this->user = $user;
     }
 
-    public function getUser() {
+    public function getUser()
+    {
         return $this->user;
+    }
+
+    public function setDate()
+    {
+        $now = new DateTime('now', new DateTimeZone('Europe/Prague'));
+        $this->date_of_upload = $now;
+    }
+
+    public function getDate()
+    {
+        return $this->date_of_upload->format('d.m.Y');
     }
 }
