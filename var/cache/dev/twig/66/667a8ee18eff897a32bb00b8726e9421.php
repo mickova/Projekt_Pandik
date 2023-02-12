@@ -44,13 +44,12 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
    <title> Document </title>
-   
    <link href=\"";
-        // line 9
+        // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/homepage.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
    <link href=\"";
-        // line 10
+        // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/layout.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
 </head>
@@ -77,7 +76,7 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
 
     public function getDebugInfo()
     {
-        return array (  54 => 10,  50 => 9,  40 => 1,);
+        return array (  53 => 9,  49 => 8,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -89,7 +88,6 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
    <title> Document </title>
-   
    <link href=\"{{ asset('css/homepage.css') }}\" rel=\"stylesheet\"/>
    <link href=\"{{ asset('css/layout.css') }}\" rel=\"stylesheet\"/>
 </head>
