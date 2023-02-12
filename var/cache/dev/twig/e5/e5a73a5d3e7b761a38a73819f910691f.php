@@ -37,21 +37,29 @@ class __TwigTemplate_1f11f5af84f6ad441dc7f069a90c177a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "html/setting.html.twig"));
 
         // line 1
-        echo "<p>Nastavení</p>
-";
+        echo "<html>
+   ";
         // line 2
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["settings"]) || array_key_exists("settings", $context) ? $context["settings"] : (function () { throw new RuntimeError('Variable "settings" does not exist.', 2, $this->source); })()), 'form_start');
-        echo "
-";
+        $this->loadTemplate("html/head.html.twig", "html/setting.html.twig", 2)->display($context);
         // line 3
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["settings"]) || array_key_exists("settings", $context) ? $context["settings"] : (function () { throw new RuntimeError('Variable "settings" does not exist.', 3, $this->source); })()), 'widget');
-        echo "
-<button type=\"submit\" class=\"button\">Nastavit</button>
-";
+        echo "   ";
+        $this->loadTemplate("html/menu.html.twig", "html/setting.html.twig", 3)->display($context);
+        // line 4
+        echo "   <h1>Nastavení</h1>
+   ";
         // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["settings"]) || array_key_exists("settings", $context) ? $context["settings"] : (function () { throw new RuntimeError('Variable "settings" does not exist.', 5, $this->source); })()), 'form_end');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["settings"]) || array_key_exists("settings", $context) ? $context["settings"] : (function () { throw new RuntimeError('Variable "settings" does not exist.', 5, $this->source); })()), 'form_start');
         echo "
-";
+   ";
+        // line 6
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["settings"]) || array_key_exists("settings", $context) ? $context["settings"] : (function () { throw new RuntimeError('Variable "settings" does not exist.', 6, $this->source); })()), 'widget');
+        echo "
+   <button type=\"submit\" class=\"button\">Nastavit</button>
+   ";
+        // line 8
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["settings"]) || array_key_exists("settings", $context) ? $context["settings"] : (function () { throw new RuntimeError('Variable "settings" does not exist.', 8, $this->source); })()), 'form_end');
+        echo "
+</html>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -69,16 +77,19 @@ class __TwigTemplate_1f11f5af84f6ad441dc7f069a90c177a extends Template
 
     public function getDebugInfo()
     {
-        return array (  52 => 5,  47 => 3,  43 => 2,  40 => 1,);
+        return array (  60 => 8,  55 => 6,  51 => 5,  48 => 4,  45 => 3,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<p>Nastavení</p>
-{{ form_start(settings) }}
-{{ form_widget(settings) }}
-<button type=\"submit\" class=\"button\">Nastavit</button>
-{{ form_end(settings) }}
-", "html/setting.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\setting.html.twig");
+        return new Source("<html>
+   {% include \"html/head.html.twig\" %}
+   {% include \"html/menu.html.twig\" %}
+   <h1>Nastavení</h1>
+   {{ form_start(settings) }}
+   {{ form_widget(settings) }}
+   <button type=\"submit\" class=\"button\">Nastavit</button>
+   {{ form_end(settings) }}
+</html>", "html/setting.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\setting.html.twig");
     }
 }

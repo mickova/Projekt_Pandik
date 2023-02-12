@@ -199,6 +199,13 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
+    <service id="App\Controller\ContactPageController" class="App\Controller\ContactPageController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\ContactPageController"/>
+      </call>
+    </service>
     <service id="App\Controller\HelpPageController" class="App\Controller\HelpPageController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -3801,6 +3808,9 @@
       <tag name="maker.command"/>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactPageController" class="App\Controller\ContactPageController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactPageController" class="App\Controller\ContactPageController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ContactPageController" class="App\Controller\ContactPageController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HelpPageController" class="App\Controller\HelpPageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HelpPageController" class="App\Controller\HelpPageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HelpPageController" class="App\Controller\HelpPageController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4398,6 +4408,12 @@
         <argument key="security.token_storage" type="service_closure" id="security.token_storage" on-invalid="ignore"/>
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\ContactPageController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ContactPageController"/>
+      <argument>App\Controller\ContactPageController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
     <service id=".service_locator.CshazM0.App\Controller\HelpPageController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HelpPageController"/>

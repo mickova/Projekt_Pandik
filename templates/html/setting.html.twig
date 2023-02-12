@@ -1,5 +1,9 @@
-<p>Nastavení</p>
-{{ form_start(settings) }}
-{{ form_widget(settings) }}
-<button type="submit" class="button">Nastavit</button>
-{{ form_end(settings) }}
+<html>
+   {% include "html/head.html.twig" %}
+   {% include "html/menu.html.twig" %}
+   <h1>Nastavení</h1>
+   {{ form_start(settings) }}
+   {{ form_widget(settings) }}
+   <button type="submit" class="button">Nastavit</button>
+   {{ form_end(settings) }}
+</html>
