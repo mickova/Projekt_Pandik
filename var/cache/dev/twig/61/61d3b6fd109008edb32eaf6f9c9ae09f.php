@@ -37,20 +37,32 @@ class __TwigTemplate_8d3d7ba99cc07251f2f7c4e19a363001 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "html/login.html.twig"));
 
         // line 1
-        echo "<p>Login</p>
-";
-        // line 2
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["LoginForm"]) || array_key_exists("LoginForm", $context) ? $context["LoginForm"] : (function () { throw new RuntimeError('Variable "LoginForm" does not exist.', 2, $this->source); })()), 'form_start');
-        echo "
-";
+        echo "<!DOCTYPE html>
+<html lang=\"en\">
+   ";
         // line 3
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["LoginForm"]) || array_key_exists("LoginForm", $context) ? $context["LoginForm"] : (function () { throw new RuntimeError('Variable "LoginForm" does not exist.', 3, $this->source); })()), 'widget');
-        echo "
-<button type=\"submit\" class=\"button\">Přihlásit!</button>
-";
+        $this->loadTemplate("html/head.html.twig", "html/login.html.twig", 3)->display($context);
+        // line 4
+        echo "   ";
+        $this->loadTemplate("html/menu_not_logged.html.twig", "html/login.html.twig", 4)->display($context);
         // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["LoginForm"]) || array_key_exists("LoginForm", $context) ? $context["LoginForm"] : (function () { throw new RuntimeError('Variable "LoginForm" does not exist.', 5, $this->source); })()), 'form_end');
+        echo "  <body>
+    <h1>Login</h1>
+    ";
+        // line 7
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["LoginForm"]) || array_key_exists("LoginForm", $context) ? $context["LoginForm"] : (function () { throw new RuntimeError('Variable "LoginForm" does not exist.', 7, $this->source); })()), 'form_start');
         echo "
+    ";
+        // line 8
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["LoginForm"]) || array_key_exists("LoginForm", $context) ? $context["LoginForm"] : (function () { throw new RuntimeError('Variable "LoginForm" does not exist.', 8, $this->source); })()), 'widget');
+        echo "
+    <button type=\"submit\" class=\"button\">Přihlásit!</button>
+    ";
+        // line 10
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["LoginForm"]) || array_key_exists("LoginForm", $context) ? $context["LoginForm"] : (function () { throw new RuntimeError('Variable "LoginForm" does not exist.', 10, $this->source); })()), 'form_end');
+        echo "
+  </body>
+</html>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -69,16 +81,23 @@ class __TwigTemplate_8d3d7ba99cc07251f2f7c4e19a363001 extends Template
 
     public function getDebugInfo()
     {
-        return array (  52 => 5,  47 => 3,  43 => 2,  40 => 1,);
+        return array (  62 => 10,  57 => 8,  53 => 7,  49 => 5,  46 => 4,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<p>Login</p>
-{{ form_start(LoginForm) }}
-{{ form_widget(LoginForm) }}
-<button type=\"submit\" class=\"button\">Přihlásit!</button>
-{{ form_end(LoginForm) }}
+        return new Source("<!DOCTYPE html>
+<html lang=\"en\">
+   {% include \"html/head.html.twig\" %}
+   {% include \"html/menu_not_logged.html.twig\" %}
+  <body>
+    <h1>Login</h1>
+    {{ form_start(LoginForm) }}
+    {{ form_widget(LoginForm) }}
+    <button type=\"submit\" class=\"button\">Přihlásit!</button>
+    {{ form_end(LoginForm) }}
+  </body>
+</html>
 ", "html/login.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\login.html.twig");
     }
 }

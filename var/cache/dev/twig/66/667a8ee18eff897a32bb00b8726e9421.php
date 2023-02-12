@@ -53,10 +53,12 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/layout.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
 </head>
-<body>
+";
+        // line 11
+        $this->loadTemplate("html/menu.html.twig", "html/homepage.html.twig", 11)->display($context);
+        // line 12
+        echo "<body>
    <h1> Homepage </h1>
-   <a href=\"/profile\"> Profil</a> 
-   <a href=\"/settings\"> Nastavení </a>
 </body>
 </html>";
         
@@ -76,7 +78,7 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
 
     public function getDebugInfo()
     {
-        return array (  53 => 9,  49 => 8,  40 => 1,);
+        return array (  60 => 12,  58 => 11,  53 => 9,  49 => 8,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -91,10 +93,9 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
    <link href=\"{{ asset('css/homepage.css') }}\" rel=\"stylesheet\"/>
    <link href=\"{{ asset('css/layout.css') }}\" rel=\"stylesheet\"/>
 </head>
+{% include \"html/menu.html.twig\" %}
 <body>
    <h1> Homepage </h1>
-   <a href=\"/profile\"> Profil</a> 
-   <a href=\"/settings\"> Nastavení </a>
 </body>
 </html>", "html/homepage.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\homepage.html.twig");
     }

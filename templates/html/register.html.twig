@@ -1,5 +1,12 @@
-<p>Registrace</p>
-{{ form_start(RegisterForm) }}
-{{ form_widget(RegisterForm) }}
-<button type="submit" class="button">Vytvořit!</button>
-{{ form_end(RegisterForm) }}
+<!DOCTYPE html>
+<html lang="en">
+   {% include "html/head.html.twig" %}
+   {% include "html/menu_not_logged.html.twig" %}
+  <body>
+    <h1>Registrace</h1>
+    {{ form_start(RegisterForm) }}
+    {{ form_widget(RegisterForm) }}
+    <button type="submit" class="button">Vytvořit!</button>
+    {{ form_end(RegisterForm) }}
+  </body>
+</html>

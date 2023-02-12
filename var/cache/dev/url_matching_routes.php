@@ -8,6 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactPageController::contact'], null, ['GET' => 0], null, false, false, null]],
         '/help' => [[['_route' => 'help', '_controller' => 'App\\Controller\\HelpPageController::help'], null, ['GET' => 0], null, false, false, null]],
         '/homepage' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomePageController::homepage'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginFormController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
