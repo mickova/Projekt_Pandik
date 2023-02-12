@@ -5,44 +5,52 @@
 {{ form_widget(choice_form) }}
 <button type="submit" class="button">Filtrovat!</button>
 {{ form_end(choice_form) }}
-
 {% if subject is defined %}
     {% if subject != "reset" %}
         {% if date1.timestamp is defined and date2.timestamp is defined %}
             <p> Vše z jedné kategorie mezi daty {{date1.format('d.m.Y')}} -  {{date2.format('d.m.Y')}}</p>
-            {% for value in materials.getSubjectBetweenDates(subject, date1.timestamp, date2.timestamp) %} 
-                Předmět : {{ value.getSchoolSubject() }}<br />
-                Obsah: {{ value.getContent() }}<br />
-                Autor: {{ value.getUser().getUsername() }}<br />
-                Datum: {{ value.getDate() }} <br /><br />
-            {% endfor %} 
+            {%  set array = materials.getSubjectBetweenDates(subject, date1.timestamp, date2.timestamp) %} 
         {% else %} 
             <p> Příspěvky z jedné kategorie </p>
-            {% for value in materials.getSubject(subject) %} 
-                Předmět: {{ value.getSchoolSubject() }}<br />
-                Obsah: {{ value.getContent() }}<br />
-                Autor: {{ value.getUser().getUsername() }}<br />
-                Datum: {{ value.getDate() }} <br /><br />
-            {% endfor %} 
+            {%  set array = materials.getSubject(subject) %} 
         {% endif %} 
     {% endif %}
     {% if subject == "reset" and date1.timestamp is not defined and date2.timestamp is not defined %}
         <p> Všechny příspěvky </p>
-        {% for value in materials.getAll() %}
-            Předmět : {{ value.getSchoolSubject() }}<br />
-            Obsah: {{ value.getContent() }}<br />
-            Autor: {{ value.getUser().getUsername() }}<br />
-            Datum: {{ value.getDate() }} <br /> <br />
-         {% endfor %} 
+        {%  set array = materials.getAll() %}
     {% endif %}
     {% if subject == "reset" and date1.timestamp is defined and date2.timestamp is defined %}
         <p> Všechny příspěvky mezi daty {{date1.format('d.m.Y')}} -  {{date2.format('d.m.Y')}}</p>
-        {% for value in materials.getEverythingBetweenDates(date1.timestamp, date2.timestamp) %}
-            Předmět : {{ value.getSchoolSubject() }}<br />
-            Obsah: {{ value.getContent() }}<br />
-            Autor: {{ value.getUser().getUsername() }}<br />
-            Datum: {{ value.getDate() }} <br /> <br />
-        {% endfor %}
+        {% set array = materials.getEverythingBetweenDates(date1.timestamp, date2.timestamp) %}
     {% endif %}
-    {% endif %}
+    {% for value in array %}
+    <a style="text-decoration:none; color:black; cursor:pointer"  onMouseOver="this.style.color='gray'" onMouseOut="this.style.color='black'" href="single_material/{{ value.getId() }}"> 
+        Předmět : {{ value.getSchoolSubject() }}<br />
+        Obsah: {{ value.getContent() }}<br />
+        Autor: {{ value.getUser().getUsername() }}<br />
+        Datum: {{ value.getDate() }} <br />
+    </a>
+        {% if (value.getUser().getId() == id ) %}
+            <a href="edit_material/{{ value.getId() }}"> Upravit </a>
+            <br />
+        {% endif %}
+        <br />
+    {% endfor %} 
+{% else %}
+    {% for value in materials.getAll() %}
+    <a style="text-decoration:none; color:black; cursor:pointer"  onMouseOver="this.style.color='gray'" onMouseOut="this.style.color='black'" href="single_material/{{ value.getId() }}"> 
+        Předmět : {{ value.getSchoolSubject() }}<br />
+        Obsah: {{ value.getContent() }}<br />
+        Autor: {{ value.getUser().getUsername() }}<br />
+        Datum: {{ value.getDate() }} <br />
+    </a>
+        {% if (value.getUser().getId() == id ) %}
+            <a href="edit_material/{{ value.getId() }}"> Upravit </a>
+            <br />
+        {% endif %}
+        <br />
+    {% endfor %} 
+{% endif %}
+
+
 </html>

@@ -18,11 +18,16 @@ class ProfileController extends AbstractController
       $user = $doctrine->getRepository(User::class)->findBy(
          ['username' => $name],
       );
+      if($user[0] == null) {
+         #Tady return 404 not found
+         return $this->render("bundles/TwigBundles/Exception/error404.html.twig");
+      } else {
+         $user = $user[0];
+      }
       if ($user != null) {
-         return $this->render("html/profile.html.twig", [
-            "profile_name" => $user[0]->getUsername(),
-            "profile_email" => $user[0]->getEmail(),
-            "profile_desc"=> $user[0]->getDescription()
+         return $this->render("html/edit_material.html.twig", [
+            "material_content" => $user->getContent(),
+            "material_subject" => $user->getSubject(),
          ]);
       } else {
          //Zde bude potom odkaz na chybovou hlášku UserNotFoundException

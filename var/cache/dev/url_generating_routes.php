@@ -4,10 +4,13 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'contact' => [[], ['_controller' => 'App\\Controller\\ContactPageController::contact'], [], [['text', '/contact']], [], [], []],
+    'help' => [[], ['_controller' => 'App\\Controller\\HelpPageController::help'], [], [['text', '/help']], [], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::homepage'], [], [['text', '/homepage']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::new'], [], [['text', '/login']], [], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\LogoutController::logout'], [], [['text', '/logout']], [], [], []],
-    'material' => [[], ['_controller' => 'App\\Controller\\MaterialFormController::material'], [], [['text', '/material']], [], [], []],
+    'edit_material' => [['id'], ['_controller' => 'App\\Controller\\MaterialEditController::new'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/material']], [], [], []],
+    'material2' => [[], ['_controller' => 'App\\Controller\\MaterialFormController::material'], [], [['text', '/material']], [], [], []],
     'all_materials' => [[], ['_controller' => 'App\\Controller\\MaterialPageController::homepage'], [], [['text', '/all_materials']], [], [], []],
     'profile' => [['name'], ['_controller' => 'App\\Controller\\ProfileController::profile'], [], [['variable', '/', '[^/]++', 'name', true], ['text', '/profile']], [], [], []],
     'my_profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::my_profile'], [], [['text', '/profile']], [], [], []],

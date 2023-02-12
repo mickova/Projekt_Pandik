@@ -1,0 +1,10 @@
+<html> 
+{% include "html/head.html.twig" %}
+<p>Upravte materiál</p>
+{{ form_start(materialForm) }}
+{{ form_widget(materialForm) }}
+<button type="submit" class="button">Přidat!</button>
+{{ form_end(materialForm) }}
+
+<a href="/all_materials"> <button> Zpátky </button> </a>
+</html>

@@ -23,13 +23,17 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
-                .'|/profile/([^/]++)(*:59)'
+                .'|/edit_material/([^/]++)(*:65)'
+                .'|/profile/([^/]++)(*:89)'
+                .'|/single_material/([^/]++)(*:121)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        59 => [
-            [['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::profile'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+        65 => [[['_route' => 'edit_material', '_controller' => 'App\\Controller\\MaterialEditController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        89 => [[['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::profile'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        121 => [
+            [['_route' => 'single_material', '_controller' => 'App\\Controller\\SingleMaterialController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -37,21 +37,26 @@ class __TwigTemplate_30e7af400e56d31a8c23361a77e1c55f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "html/material.html.twig"));
 
         // line 1
-        echo "<p>Vložte materiál</p>
+        echo "<html> 
 ";
         // line 2
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["materialForm"]) || array_key_exists("materialForm", $context) ? $context["materialForm"] : (function () { throw new RuntimeError('Variable "materialForm" does not exist.', 2, $this->source); })()), 'form_start');
+        $this->loadTemplate("html/head.html.twig", "html/material.html.twig", 2)->display($context);
+        // line 3
+        echo "<p>Vložte materiál</p>
+";
+        // line 4
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["materialForm"]) || array_key_exists("materialForm", $context) ? $context["materialForm"] : (function () { throw new RuntimeError('Variable "materialForm" does not exist.', 4, $this->source); })()), 'form_start');
         echo "
 ";
-        // line 3
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["materialForm"]) || array_key_exists("materialForm", $context) ? $context["materialForm"] : (function () { throw new RuntimeError('Variable "materialForm" does not exist.', 3, $this->source); })()), 'widget');
+        // line 5
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["materialForm"]) || array_key_exists("materialForm", $context) ? $context["materialForm"] : (function () { throw new RuntimeError('Variable "materialForm" does not exist.', 5, $this->source); })()), 'widget');
         echo "
 <button type=\"submit\" class=\"button\">Přidat!</button>
 ";
-        // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["materialForm"]) || array_key_exists("materialForm", $context) ? $context["materialForm"] : (function () { throw new RuntimeError('Variable "materialForm" does not exist.', 5, $this->source); })()), 'form_end');
+        // line 7
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["materialForm"]) || array_key_exists("materialForm", $context) ? $context["materialForm"] : (function () { throw new RuntimeError('Variable "materialForm" does not exist.', 7, $this->source); })()), 'form_end');
         echo "
-";
+</html>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -69,16 +74,18 @@ class __TwigTemplate_30e7af400e56d31a8c23361a77e1c55f extends Template
 
     public function getDebugInfo()
     {
-        return array (  52 => 5,  47 => 3,  43 => 2,  40 => 1,);
+        return array (  57 => 7,  52 => 5,  48 => 4,  45 => 3,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<p>Vložte materiál</p>
+        return new Source("<html> 
+{% include \"html/head.html.twig\" %}
+<p>Vložte materiál</p>
 {{ form_start(materialForm) }}
 {{ form_widget(materialForm) }}
 <button type=\"submit\" class=\"button\">Přidat!</button>
 {{ form_end(materialForm) }}
-", "html/material.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\material.html.twig");
+</html>", "html/material.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\material.html.twig");
     }
 }
