@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ae90d19b50abc350d206fc9081365276f2db3594',
+        'reference' => '2be84db6126a225ebd48c78dce5166ca4f4b26d1',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ae90d19b50abc350d206fc9081365276f2db3594',
+            'reference' => '2be84db6126a225ebd48c78dce5166ca4f4b26d1',
             'dev_requirement' => false,
         ),
         'doctrine/cache' => array(
@@ -252,6 +252,15 @@
             'provided' => array(
                 0 => '1.0|2.0|3.0',
             ),
+        ),
+        'symfony/apache-pack' => array(
+            'pretty_version' => 'v1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'symfony-pack',
+            'install_path' => __DIR__ . '/../symfony/apache-pack',
+            'aliases' => array(),
+            'reference' => '3aa5818d73ad2551281fc58a75afd9ca82622e6c',
+            'dev_requirement' => false,
         ),
         'symfony/asset' => array(
             'pretty_version' => 'v6.2.5',
