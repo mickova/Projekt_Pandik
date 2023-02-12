@@ -14,7 +14,7 @@ use Symfony\Bundle\SecurityBundle\Security;
 class MaterialFormController extends AbstractController
 {
 
-   #[Route('/material', name: "material", methods: ['GET', 'POST'])]
+   #[Route('/material', name: "material2", methods: ['GET', 'POST'])]
    public function material(Request $request, ManagerRegistry $doctrine, Security $security)
    {
       $form = $this->createForm(MaterialFormType::class);
