@@ -39,26 +39,15 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
         // line 1
         echo "<!DOCTYPE html>
 <html lang=\"en\">
-<head>
-   <meta charset=\"UTF-8\">
-   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-   <title> Document </title>
-   <link href=\"";
-        // line 8
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/homepage.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\"/>
-   <link href=\"";
-        // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/layout.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\"/>
-</head>
 ";
-        // line 11
-        $this->loadTemplate("html/menu.html.twig", "html/homepage.html.twig", 11)->display($context);
-        // line 12
+        // line 3
+        $this->loadTemplate("html/head.html.twig", "html/homepage.html.twig", 3)->display($context);
+        // line 4
+        $this->loadTemplate("html/menu.html.twig", "html/homepage.html.twig", 4)->display($context);
+        // line 5
         echo "<body>
    <h1> Homepage </h1>
+   <a href=\"/all_materials\"> Všechny materiály </a>
 </body>
 </html>";
         
@@ -78,24 +67,18 @@ class __TwigTemplate_c9f74d6d6d8057b2003e5d3e4580c58a extends Template
 
     public function getDebugInfo()
     {
-        return array (  60 => 12,  58 => 11,  53 => 9,  49 => 8,  40 => 1,);
+        return array (  48 => 5,  46 => 4,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
 <html lang=\"en\">
-<head>
-   <meta charset=\"UTF-8\">
-   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-   <title> Document </title>
-   <link href=\"{{ asset('css/homepage.css') }}\" rel=\"stylesheet\"/>
-   <link href=\"{{ asset('css/layout.css') }}\" rel=\"stylesheet\"/>
-</head>
+{% include \"html/head.html.twig\" %}
 {% include \"html/menu.html.twig\" %}
 <body>
    <h1> Homepage </h1>
+   <a href=\"/all_materials\"> Všechny materiály </a>
 </body>
 </html>", "html/homepage.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\homepage.html.twig");
     }

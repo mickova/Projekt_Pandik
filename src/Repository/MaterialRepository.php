@@ -52,7 +52,7 @@ class MaterialRepository extends ServiceEntityRepository
             FROM App\Entity\Material m'
         );
         // returns an array of Product objects
-        return $query->getSQL();
+        return $query->getResult();
     }
 
     /**

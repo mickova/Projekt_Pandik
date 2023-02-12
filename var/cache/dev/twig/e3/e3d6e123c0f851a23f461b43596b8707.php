@@ -38,33 +38,22 @@ class __TwigTemplate_4a1f6914cd0ab6903a2a8ea9a54f7fcd extends Template
 
         // line 1
         echo "<!DOCTYPE html>
-
 <html lang=\"en\">
-<head>
-   <meta charset=\"UTF-8\">
-   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-   <title>Document</title>
-
-   <link href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/homepage.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\"/>
-   <link href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/layout.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\"/>
-</head>
-<body>
-  <nav> 
-    <div class=\"icon\"> LogOwO </div> 
-    <h1> Projekt pandík </h1>
-  </nav>
-  <div class=\"\">
-    <a href=\"login\">Login</a>
-    <a>Registrace</a> 
-  </div>
-</body>
+  ";
+        // line 3
+        $this->loadTemplate("html/head.html.twig", "html/welcome.html.twig", 3)->display($context);
+        // line 4
+        echo "  <body>
+    <nav>
+      <div class=\"icon\">LogOwO</div>
+      <h1>Projekt pandík</h1>
+    </nav>
+    <div class=\"\">
+      <a href=\"/login\">Login</a>
+      <a href=\"/register\">Registrace</a>
+      <a href=\"/kontakt\"> Kontakt </a>
+    </div>
+  </body>
 </html>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -83,33 +72,25 @@ class __TwigTemplate_4a1f6914cd0ab6903a2a8ea9a54f7fcd extends Template
 
     public function getDebugInfo()
     {
-        return array (  55 => 11,  51 => 10,  40 => 1,);
+        return array (  46 => 4,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
-
 <html lang=\"en\">
-<head>
-   <meta charset=\"UTF-8\">
-   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-   <title>Document</title>
-
-   <link href=\"{{ asset('css/homepage.css') }}\" rel=\"stylesheet\"/>
-   <link href=\"{{ asset('css/layout.css') }}\" rel=\"stylesheet\"/>
-</head>
-<body>
-  <nav> 
-    <div class=\"icon\"> LogOwO </div> 
-    <h1> Projekt pandík </h1>
-  </nav>
-  <div class=\"\">
-    <a href=\"login\">Login</a>
-    <a>Registrace</a> 
-  </div>
-</body>
+  {% include \"html/head.html.twig\" %}
+  <body>
+    <nav>
+      <div class=\"icon\">LogOwO</div>
+      <h1>Projekt pandík</h1>
+    </nav>
+    <div class=\"\">
+      <a href=\"/login\">Login</a>
+      <a href=\"/register\">Registrace</a>
+      <a href=\"/kontakt\"> Kontakt </a>
+    </div>
+  </body>
 </html>", "html/welcome.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\welcome.html.twig");
     }
 }

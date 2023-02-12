@@ -37,180 +37,177 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "html/all_materials.html.twig"));
 
         // line 1
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["choice_form"]) || array_key_exists("choice_form", $context) ? $context["choice_form"] : (function () { throw new RuntimeError('Variable "choice_form" does not exist.', 1, $this->source); })()), 'form_start');
+        echo "<html>
+    ";
+        // line 2
+        $this->loadTemplate("html/head.html.twig", "html/all_materials.html.twig", 2)->display($context);
+        // line 3
+        $this->loadTemplate("html/menu.html.twig", "html/all_materials.html.twig", 3)->display($context);
+        // line 4
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["choice_form"]) || array_key_exists("choice_form", $context) ? $context["choice_form"] : (function () { throw new RuntimeError('Variable "choice_form" does not exist.', 4, $this->source); })()), 'form_start');
         echo "
 ";
-        // line 2
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["choice_form"]) || array_key_exists("choice_form", $context) ? $context["choice_form"] : (function () { throw new RuntimeError('Variable "choice_form" does not exist.', 2, $this->source); })()), 'widget');
+        // line 5
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["choice_form"]) || array_key_exists("choice_form", $context) ? $context["choice_form"] : (function () { throw new RuntimeError('Variable "choice_form" does not exist.', 5, $this->source); })()), 'widget');
         echo "
 <button type=\"submit\" class=\"button\">Filtrovat!</button>
 ";
-        // line 4
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["choice_form"]) || array_key_exists("choice_form", $context) ? $context["choice_form"] : (function () { throw new RuntimeError('Variable "choice_form" does not exist.', 4, $this->source); })()), 'form_end');
+        // line 7
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["choice_form"]) || array_key_exists("choice_form", $context) ? $context["choice_form"] : (function () { throw new RuntimeError('Variable "choice_form" does not exist.', 7, $this->source); })()), 'form_end');
         echo "
-
 ";
-        // line 6
+        // line 8
         if (array_key_exists("subject", $context)) {
-            // line 7
-            echo "
-    ";
-            // line 8
-            if (((isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 8, $this->source); })()) != "reset")) {
-                // line 9
+            // line 9
+            echo "    ";
+            if (((isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 9, $this->source); })()) != "reset")) {
+                // line 10
                 echo "        ";
-                if ((twig_get_attribute($this->env, $this->source, ($context["date1"] ?? null), "timestamp", [], "any", true, true, false, 9) && twig_get_attribute($this->env, $this->source, ($context["date2"] ?? null), "timestamp", [], "any", true, true, false, 9))) {
-                    // line 10
+                if ((twig_get_attribute($this->env, $this->source, ($context["date1"] ?? null), "timestamp", [], "any", true, true, false, 10) && twig_get_attribute($this->env, $this->source, ($context["date2"] ?? null), "timestamp", [], "any", true, true, false, 10))) {
+                    // line 11
                     echo "            <p> Vše z jedné kategorie mezi daty ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 10, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 10), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 11, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 11), "html", null, true);
                     echo " -  ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 10, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 10), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 11, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 11), "html", null, true);
                     echo "</p>
             ";
-                    // line 11
-                    $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 11, $this->source); })()), "getSubjectBetweenDates", [0 => (isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 11, $this->source); })()), 1 => twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 11, $this->source); })()), "timestamp", [], "any", false, false, false, 11), 2 => twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 11, $this->source); })()), "timestamp", [], "any", false, false, false, 11)], "method", false, false, false, 11));
-                    foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-                        echo " 
-                Předmět : ";
-                        // line 12
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 12), "html", null, true);
-                        echo "<br />
-                Obsah: ";
-                        // line 13
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 13), "html", null, true);
-                        echo "<br />
-                Autor: ";
-                        // line 14
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 14), "getUsername", [], "method", false, false, false, 14), "html", null, true);
-                        echo "<br />
-                Datum: ";
-                        // line 15
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 15), "html", null, true);
-                        echo " <br /><br />
-            ";
-                    }
-                    $_parent = $context['_parent'];
-                    unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
-                    $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 16
+                    // line 12
+                    $context["array"] = twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 12, $this->source); })()), "getSubjectBetweenDates", [0 => (isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 12, $this->source); })()), 1 => twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 12, $this->source); })()), "timestamp", [], "any", false, false, false, 12), 2 => twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 12, $this->source); })()), "timestamp", [], "any", false, false, false, 12)], "method", false, false, false, 12);
                     echo " 
         ";
                 } else {
-                    // line 17
+                    // line 13
                     echo " 
             <p> Příspěvky z jedné kategorie </p>
             ";
-                    // line 19
-                    $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 19, $this->source); })()), "getSubject", [0 => (isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 19, $this->source); })())], "method", false, false, false, 19));
-                    foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-                        echo " 
-                Předmět: ";
-                        // line 20
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 20), "html", null, true);
-                        echo "<br />
-                Obsah: ";
-                        // line 21
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 21), "html", null, true);
-                        echo "<br />
-                Autor: ";
-                        // line 22
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 22), "getUsername", [], "method", false, false, false, 22), "html", null, true);
-                        echo "<br />
-                Datum: ";
-                        // line 23
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 23), "html", null, true);
-                        echo " <br /><br />
-            ";
-                    }
-                    $_parent = $context['_parent'];
-                    unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
-                    $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 24
+                    // line 15
+                    $context["array"] = twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 15, $this->source); })()), "getSubject", [0 => (isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 15, $this->source); })())], "method", false, false, false, 15);
                     echo " 
         ";
                 }
-                // line 25
+                // line 16
                 echo " 
     ";
             }
-            // line 27
+            // line 18
             echo "    ";
-            if (((((isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 27, $this->source); })()) == "reset") &&  !twig_get_attribute($this->env, $this->source, ($context["date1"] ?? null), "timestamp", [], "any", true, true, false, 27)) &&  !twig_get_attribute($this->env, $this->source, ($context["date2"] ?? null), "timestamp", [], "any", true, true, false, 27))) {
-                // line 28
+            if (((((isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 18, $this->source); })()) == "reset") &&  !twig_get_attribute($this->env, $this->source, ($context["date1"] ?? null), "timestamp", [], "any", true, true, false, 18)) &&  !twig_get_attribute($this->env, $this->source, ($context["date2"] ?? null), "timestamp", [], "any", true, true, false, 18))) {
+                // line 19
                 echo "        <p> Všechny příspěvky </p>
         ";
-                // line 29
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 29, $this->source); })()), "getAll", [], "method", false, false, false, 29));
-                foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-                    // line 30
-                    echo "            Předmět : ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 30), "html", null, true);
-                    echo "<br />
-            Obsah: ";
-                    // line 31
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 31), "html", null, true);
-                    echo "<br />
-            Autor: ";
-                    // line 32
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 32), "getUsername", [], "method", false, false, false, 32), "html", null, true);
-                    echo "<br />
-            Datum: ";
-                    // line 33
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 33), "html", null, true);
-                    echo " <br /> <br />
-         ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 34
-                echo " 
-    ";
-            }
-            // line 36
-            echo "    ";
-            if (((((isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 36, $this->source); })()) == "reset") && twig_get_attribute($this->env, $this->source, ($context["date1"] ?? null), "timestamp", [], "any", true, true, false, 36)) && twig_get_attribute($this->env, $this->source, ($context["date2"] ?? null), "timestamp", [], "any", true, true, false, 36))) {
-                // line 37
-                echo "        <p> Všechny příspěvky mezi daty ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 37, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 37), "html", null, true);
-                echo " -  ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 37, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 37), "html", null, true);
-                echo "</p>
-        ";
-                // line 38
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 38, $this->source); })()), "getEverythingBetweenDates", [0 => twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 38, $this->source); })()), "timestamp", [], "any", false, false, false, 38), 1 => twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 38, $this->source); })()), "timestamp", [], "any", false, false, false, 38)], "method", false, false, false, 38));
-                foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-                    // line 39
-                    echo "            Předmět : ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 39), "html", null, true);
-                    echo "<br />
-            Obsah: ";
-                    // line 40
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 40), "html", null, true);
-                    echo "<br />
-            Autor: ";
-                    // line 41
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 41), "getUsername", [], "method", false, false, false, 41), "html", null, true);
-                    echo "<br />
-            Datum: ";
-                    // line 42
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 42), "html", null, true);
-                    echo " <br /> <br />
-        ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 44
+                // line 20
+                $context["array"] = twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 20, $this->source); })()), "getAll", [], "method", false, false, false, 20);
+                // line 21
                 echo "    ";
             }
-            // line 45
+            // line 22
             echo "    ";
+            if (((((isset($context["subject"]) || array_key_exists("subject", $context) ? $context["subject"] : (function () { throw new RuntimeError('Variable "subject" does not exist.', 22, $this->source); })()) == "reset") && twig_get_attribute($this->env, $this->source, ($context["date1"] ?? null), "timestamp", [], "any", true, true, false, 22)) && twig_get_attribute($this->env, $this->source, ($context["date2"] ?? null), "timestamp", [], "any", true, true, false, 22))) {
+                // line 23
+                echo "        <p> Všechny příspěvky mezi daty ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 23, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 23), "html", null, true);
+                echo " -  ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 23, $this->source); })()), "format", [0 => "d.m.Y"], "method", false, false, false, 23), "html", null, true);
+                echo "</p>
+        ";
+                // line 24
+                $context["array"] = twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 24, $this->source); })()), "getEverythingBetweenDates", [0 => twig_get_attribute($this->env, $this->source, (isset($context["date1"]) || array_key_exists("date1", $context) ? $context["date1"] : (function () { throw new RuntimeError('Variable "date1" does not exist.', 24, $this->source); })()), "timestamp", [], "any", false, false, false, 24), 1 => twig_get_attribute($this->env, $this->source, (isset($context["date2"]) || array_key_exists("date2", $context) ? $context["date2"] : (function () { throw new RuntimeError('Variable "date2" does not exist.', 24, $this->source); })()), "timestamp", [], "any", false, false, false, 24)], "method", false, false, false, 24);
+                // line 25
+                echo "    ";
+            }
+            // line 26
+            echo "    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["array"]) || array_key_exists("array", $context) ? $context["array"] : (function () { throw new RuntimeError('Variable "array" does not exist.', 26, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
+                // line 27
+                echo "        Předmět : ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 27), "html", null, true);
+                echo "<br />
+        Obsah: ";
+                // line 28
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 28), "html", null, true);
+                echo "<br />
+        Autor: ";
+                // line 29
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 29), "getUsername", [], "method", false, false, false, 29), "html", null, true);
+                echo "<br />
+        Datum: ";
+                // line 30
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 30), "html", null, true);
+                echo " <br />
+        ";
+                // line 31
+                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 31), "getId", [], "method", false, false, false, 31) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 31, $this->source); })()))) {
+                    // line 32
+                    echo "            <a href=\"edit_material/";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getId", [], "method", false, false, false, 32), "html", null, true);
+                    echo "\"> Upravit </a>
+            <br />
+        ";
+                }
+                // line 35
+                echo "        <br />
+    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 36
+            echo " 
+";
+        } else {
+            // line 38
+            echo "    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 38, $this->source); })()), "getAll", [], "method", false, false, false, 38));
+            foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
+                // line 39
+                echo "    <a style=\"text-decoration:none; color:black; cursor:pointer\"  onMouseOver=\"this.style.color='gray'\" onMouseOut=\"this.style.color='black'\" href=\"single_material/";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getId", [], "method", false, false, false, 39), "html", null, true);
+                echo "\"> 
+        Předmět : ";
+                // line 40
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 40), "html", null, true);
+                echo "<br />
+        Obsah: ";
+                // line 41
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 41), "html", null, true);
+                echo "<br />
+        Autor: ";
+                // line 42
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 42), "getUsername", [], "method", false, false, false, 42), "html", null, true);
+                echo "<br />
+        Datum: ";
+                // line 43
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 43), "html", null, true);
+                echo " <br />
+    </a>
+        ";
+                // line 45
+                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 45), "getId", [], "method", false, false, false, 45) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 45, $this->source); })()))) {
+                    // line 46
+                    echo "            <a href=\"edit_material/";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getId", [], "method", false, false, false, 46), "html", null, true);
+                    echo "\"> Upravit </a>
+            <br />
+        ";
+                }
+                // line 49
+                echo "        <br />
+    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 50
+            echo " 
+";
         }
+        // line 52
+        echo "
+
+</html>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -228,56 +225,64 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
 
     public function getDebugInfo()
     {
-        return array (  212 => 45,  209 => 44,  201 => 42,  197 => 41,  193 => 40,  188 => 39,  184 => 38,  177 => 37,  174 => 36,  170 => 34,  162 => 33,  158 => 32,  154 => 31,  149 => 30,  145 => 29,  142 => 28,  139 => 27,  135 => 25,  131 => 24,  123 => 23,  119 => 22,  115 => 21,  111 => 20,  105 => 19,  101 => 17,  97 => 16,  89 => 15,  85 => 14,  81 => 13,  77 => 12,  71 => 11,  64 => 10,  61 => 9,  59 => 8,  56 => 7,  54 => 6,  49 => 4,  44 => 2,  40 => 1,);
+        return array (  208 => 52,  204 => 50,  197 => 49,  190 => 46,  188 => 45,  183 => 43,  179 => 42,  175 => 41,  171 => 40,  166 => 39,  161 => 38,  157 => 36,  150 => 35,  143 => 32,  141 => 31,  137 => 30,  133 => 29,  129 => 28,  124 => 27,  119 => 26,  116 => 25,  114 => 24,  107 => 23,  104 => 22,  101 => 21,  99 => 20,  96 => 19,  93 => 18,  89 => 16,  84 => 15,  80 => 13,  75 => 12,  68 => 11,  65 => 10,  62 => 9,  60 => 8,  56 => 7,  51 => 5,  47 => 4,  45 => 3,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{{ form_start(choice_form) }}
+        return new Source("<html>
+    {% include \"html/head.html.twig\" %}
+{% include \"html/menu.html.twig\" %}
+{{ form_start(choice_form) }}
 {{ form_widget(choice_form) }}
 <button type=\"submit\" class=\"button\">Filtrovat!</button>
 {{ form_end(choice_form) }}
-
 {% if subject is defined %}
-
     {% if subject != \"reset\" %}
         {% if date1.timestamp is defined and date2.timestamp is defined %}
             <p> Vše z jedné kategorie mezi daty {{date1.format('d.m.Y')}} -  {{date2.format('d.m.Y')}}</p>
-            {% for value in materials.getSubjectBetweenDates(subject, date1.timestamp, date2.timestamp) %} 
-                Předmět : {{ value.getSchoolSubject() }}<br />
-                Obsah: {{ value.getContent() }}<br />
-                Autor: {{ value.getUser().getUsername() }}<br />
-                Datum: {{ value.getDate() }} <br /><br />
-            {% endfor %} 
+            {%  set array = materials.getSubjectBetweenDates(subject, date1.timestamp, date2.timestamp) %} 
         {% else %} 
             <p> Příspěvky z jedné kategorie </p>
-            {% for value in materials.getSubject(subject) %} 
-                Předmět: {{ value.getSchoolSubject() }}<br />
-                Obsah: {{ value.getContent() }}<br />
-                Autor: {{ value.getUser().getUsername() }}<br />
-                Datum: {{ value.getDate() }} <br /><br />
-            {% endfor %} 
+            {%  set array = materials.getSubject(subject) %} 
         {% endif %} 
     {% endif %}
     {% if subject == \"reset\" and date1.timestamp is not defined and date2.timestamp is not defined %}
         <p> Všechny příspěvky </p>
-        {% for value in materials.getAll() %}
-            Předmět : {{ value.getSchoolSubject() }}<br />
-            Obsah: {{ value.getContent() }}<br />
-            Autor: {{ value.getUser().getUsername() }}<br />
-            Datum: {{ value.getDate() }} <br /> <br />
-         {% endfor %} 
+        {%  set array = materials.getAll() %}
     {% endif %}
     {% if subject == \"reset\" and date1.timestamp is defined and date2.timestamp is defined %}
         <p> Všechny příspěvky mezi daty {{date1.format('d.m.Y')}} -  {{date2.format('d.m.Y')}}</p>
-        {% for value in materials.getEverythingBetweenDates(date1.timestamp, date2.timestamp) %}
-            Předmět : {{ value.getSchoolSubject() }}<br />
-            Obsah: {{ value.getContent() }}<br />
-            Autor: {{ value.getUser().getUsername() }}<br />
-            Datum: {{ value.getDate() }} <br /> <br />
-        {% endfor %}
+        {% set array = materials.getEverythingBetweenDates(date1.timestamp, date2.timestamp) %}
     {% endif %}
-    {% endif %}
-", "html/all_materials.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\all_materials.html.twig");
+    {% for value in array %}
+        Předmět : {{ value.getSchoolSubject() }}<br />
+        Obsah: {{ value.getContent() }}<br />
+        Autor: {{ value.getUser().getUsername() }}<br />
+        Datum: {{ value.getDate() }} <br />
+        {% if (value.getUser().getId() == id ) %}
+            <a href=\"edit_material/{{ value.getId() }}\"> Upravit </a>
+            <br />
+        {% endif %}
+        <br />
+    {% endfor %} 
+{% else %}
+    {% for value in materials.getAll() %}
+    <a style=\"text-decoration:none; color:black; cursor:pointer\"  onMouseOver=\"this.style.color='gray'\" onMouseOut=\"this.style.color='black'\" href=\"single_material/{{ value.getId() }}\"> 
+        Předmět : {{ value.getSchoolSubject() }}<br />
+        Obsah: {{ value.getContent() }}<br />
+        Autor: {{ value.getUser().getUsername() }}<br />
+        Datum: {{ value.getDate() }} <br />
+    </a>
+        {% if (value.getUser().getId() == id ) %}
+            <a href=\"edit_material/{{ value.getId() }}\"> Upravit </a>
+            <br />
+        {% endif %}
+        <br />
+    {% endfor %} 
+{% endif %}
+
+
+</html>", "html/all_materials.html.twig", "C:\\Users\\Matyáš\\Desktop\\ProjectPandik\\templates\\html\\all_materials.html.twig");
     }
 }
