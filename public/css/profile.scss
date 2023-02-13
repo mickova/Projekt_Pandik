@@ -1,0 +1,45 @@
+// profile.scss
+@use 'variables';
+.container {
+   width:100%;
+
+   &_profile-card {
+      width: 70%;
+      margin:2rem auto 0;
+      border:1px solid black;
+
+
+      &_header {
+         display:flex;
+         h1 {
+            padding-left:2rem;
+            padding-top:1rem;
+         }
+         a {
+            padding-top:2rem;
+            padding-right:1rem;
+         }
+
+         a, button {
+            margin-left:auto;
+         }
+
+         button {
+            width:125px;
+            height:40px;
+            background-color:variables.$primary-color;
+            color: variables.$terciary-color;
+            border:none;
+            font-size:1.25rem;
+         }
+      }
+   }
+   &_materials {
+      margin-left:2rem;
+
+      &_single-material {
+         margin:0.5rem 2rem 0.5rem 0;
+         border:1px solid black;
+      }
+   }
+}

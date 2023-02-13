@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+}
+.container_profile-card {
+  width: 70%;
+  margin: 2rem auto 0;
+  border: 1px solid black;
+}
+.container_profile-card_header {
+  display: flex;
+}
+.container_profile-card_header h1 {
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+.container_profile-card_header a {
+  padding-top: 2rem;
+  padding-right: 1rem;
+}
+.container_profile-card_header a, .container_profile-card_header button {
+  margin-left: auto;
+}
+.container_profile-card_header button {
+  width: 125px;
+  height: 40px;
+  background-color: #5386E4;
+  color: #E8E9F3;
+  border: none;
+  font-size: 1.25rem;
+}
+.container_materials {
+  margin-left: 2rem;
+}
+.container_materials_single-material {
+  margin: 0.5rem 2rem 0.5rem 0;
+  border: 1px solid black;
+}/*# sourceMappingURL=profile.css.map */

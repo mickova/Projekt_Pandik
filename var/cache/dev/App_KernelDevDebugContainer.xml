@@ -49,7 +49,7 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
-    <parameter key="material_directory">C:\Users\Matyáš\Desktop\ProjectPandik/public/material</parameter>
+    <parameter key="material_directory">C:\Users\Matyáš\Desktop\ProjectPandik/public/materials</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -2057,8 +2057,8 @@
       <tag name="container.preload" class="Twig\TemplateWrapper"/>
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
+        <argument key="cache">false</argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\Users\Matyáš\Desktop\ProjectPandik\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -2156,12 +2156,6 @@
       </argument>
       <argument>C:\Users\Matyáš\Desktop\ProjectPandik/templates</argument>
       <argument type="collection"/>
-    </service>
-    <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
-      <tag name="kernel.cache_warmer"/>
-      <tag name="container.service_subscriber" id="twig"/>
-      <argument type="service" id=".service_locator.etVElvN.twig.template_cache_warmer"/>
-      <argument type="service" id="twig.template_iterator"/>
     </service>
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
@@ -4727,18 +4721,6 @@
       <argument>router.cache_warmer</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.cUcW89y" method="withContext"/>
-    </service>
-    <service id=".service_locator.etVElvN" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="twig" type="service_closure" id="twig"/>
-      </argument>
-    </service>
-    <service id=".service_locator.etVElvN.twig.template_cache_warmer" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="twig.template_cache_warmer"/>
-      <argument>twig.template_cache_warmer</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.etVElvN" method="withContext"/>
     </service>
     <service id=".service_locator.XXv1IfR" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>

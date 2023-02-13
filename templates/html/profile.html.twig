@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include "html/head.html.twig" %} 
-  {% include "html/menu.html.twig" %}
-  <body>
-    <h1 id="profile_name">{{ profile_name }}</h1>
-    <p id="profile_email">{{ profile_email }}</p>
-    <p id="profile_desc">{{ profile_desc }}</p>
-    <h1> Příspěvky uživatele </h1>
-    {% for value in materials %}
-        Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah:<a href="material/{{value.getFilename()}}"/> Zde </a> <br />
-        Autor: <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a><br />
-        Datum: {{ value.getDate() }} <br />
-        {% if (value.getUser().getId() == id ) %}
-            <a href="edit_material/{{ value.getId() }}"> Upravit </a>
-            <br />
-        {% endif %}
-        <br />
-    {% endfor %} 
-  </body>
-</html>
+	{% include "html/head.html.twig" %}
+	<body class="">
+		{% include "html/menu.html.twig" %}
+		<main class="--with_aside">
+			{% include "html/aside.html.twig" %}
+			<div class="container">
+				<div class="container_profile-card">
+          <div class="container_profile-card_header"> 
+					<h1 id="profile_name">{{ profile_name }}</h1>
+          <a href="/settings"> <button class=""> Nastavení </button> </a>
+        </div>
+        <div class="container_materials">
+					<h1>
+						Příspěvky uživatele
+					</h1>
+					{% for value in materials %}
+          <div class="container_materials_single-material">
+						Předmět :
+						{{ value.getSchoolSubject() }}<br/>
+						Obsah:<a href="material/{{value.getFilename()}}"/>
+						Zde
+					</a>
+					<br/>
+					Datum:
+					{{ value.getDate() }}
+					<br/>
+					{% if (value.getUser().getId() == id ) %}
+						<a href="edit_material/{{ value.getId() }}">
+							Upravit
+						</a>
+						<br/>
+					{% endif %}
+					<br/>
+          </div>
+				{% endfor %}
+          </div>
+			</div>
+		</div>
+	</body>
+</html></main></body></html>
