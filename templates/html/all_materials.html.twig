@@ -25,7 +25,7 @@
     {% endif %}
     {% for value in array %}
         Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah: <a href="material/{{value.getFilename()}}"/> Zde </a>  <br>
+        Obsah: <a href="materials/{{value.getFilename()}}"/> Zde </a>  <br>
         Autor: {{ value.getUser().getUsername() }}<br />
         Datum: {{ value.getDate() }} <br />
         {% if (value.getUser().getId() == id ) %}
@@ -37,7 +37,7 @@
 {% else %}
     {% for value in materials.getAll() %}
         Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah:<a href="material/{{value.getFilename()}}"/> Zde </a> <br />
+        Obsah:<a href="materials/{{value.getFilename()}}"/> Zde </a> <br />
         Autor: <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a><br />
         Datum: {{ value.getDate() }} <br />
         {% if (value.getUser().getId() == id ) %}
