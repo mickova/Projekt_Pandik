@@ -105,4 +105,13 @@ class MaterialRepository extends ServiceEntityRepository
             WHERE m.date_of_upload BETWEEN '" . $realdate1 . "'  AND '" . $realdate2 ."'");
         return  $query->getResult();
     }
+
+    public function getByAuthor($author) {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            "SELECT m
+            FROM App\Entity\Material m 
+            WHERE m.user = ?1")->setParameter("1", $author);
+        return  $query->getResult();
+    }
 }

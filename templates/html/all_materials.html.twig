@@ -24,12 +24,10 @@
         {% set array = materials.getEverythingBetweenDates(date1.timestamp, date2.timestamp) %}
     {% endif %}
     {% for value in array %}
-    <a style="text-decoration:none; color:black; cursor:pointer"  onMouseOver="this.style.color='gray'" onMouseOut="this.style.color='black'" href="single_material/{{ value.getId() }}"> 
         Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah: {{ value.getContent() }}<br />
+        Obsah: <a href="material/{{value.getFilename()}}"/> Zde </a>  <br>
         Autor: {{ value.getUser().getUsername() }}<br />
         Datum: {{ value.getDate() }} <br />
-    </a>
         {% if (value.getUser().getId() == id ) %}
             <a href="edit_material/{{ value.getId() }}"> Upravit </a>
             <br />
@@ -38,12 +36,10 @@
     {% endfor %} 
 {% else %}
     {% for value in materials.getAll() %}
-    <a style="text-decoration:none; color:black; cursor:pointer"  onMouseOver="this.style.color='gray'" onMouseOut="this.style.color='black'" href="single_material/{{ value.getId() }}"> 
         Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah: {{ value.getContent() }}<br />
-        Autor: {{ value.getUser().getUsername() }}<br />
+        Obsah:<a href="material/{{value.getFilename()}}"/> Zde </a> <br />
+        Autor: <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a><br />
         Datum: {{ value.getDate() }} <br />
-    </a>
         {% if (value.getUser().getId() == id ) %}
             <a href="edit_material/{{ value.getId() }}"> Upravit </a>
             <br />

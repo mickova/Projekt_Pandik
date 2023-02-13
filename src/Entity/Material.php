@@ -22,24 +22,27 @@ class Material
     private ?string $school_subject = null;
 
     #[ORM\Column(length: 4000)]
-    private ?string $content = null;
+    private ?string $path = null;
 
     #[ORM\Column(length: 4000)]
     private DateTime $date_of_upload;
+
+    #[ORM\Column(type: 'string')]
+    private $filename;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getContent(): ?string
+    public function getPath(): ?string
     {
-        return $this->content;
+        return $this->path;
     }
 
-    public function setContent(string $content): self
+    public function setPath(string $path): self
     {
-        $this->content = $content;
+        $this->path = $path;
 
         return $this;
     }
@@ -76,4 +79,17 @@ class Material
     {
         return $this->date_of_upload->format('d.m.Y');
     }
+
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
 }

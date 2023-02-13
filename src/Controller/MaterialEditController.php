@@ -10,12 +10,14 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Form\Type\MaterialFormType;
 use Symfony\Bundle\SecurityBundle\Security;
 use App\Entity\Material;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class MaterialEditController extends AbstractController
 {
 
    #[Route('/edit_material/{id}', name: "edit_material", methods: ['GET', 'POST'])]
-   public function new(int $id, ManagerRegistry $doctrine, Request $request, Security $security)
+   public function new(int $id, ManagerRegistry $doctrine, Request $request, Security $security,  SluggerInterface $slugger)
    {
       $form = $this->createForm(MaterialFormType::class);
       $form->handleRequest($request);
@@ -33,7 +35,22 @@ class MaterialEditController extends AbstractController
          $entityManager = $doctrine->getManager();
          $data = $form->getData();
          if ($data["content"] != null) {
-            $material->setContent($data["content"]);
+            $file = $form->get('content')->getData();
+            if ($file) {
+               $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+               // this is needed to safely include the file name as part of the URL
+               $safeFilename = $slugger->slug($originalFilename);
+               $newFilename = $safeFilename.'-'.uniqid().'.'.$file->guessExtension();
+               try {
+                   $file->move(
+                       $this->getParameter('material_directory'),
+                       $newFilename
+                   );
+               } catch (FileException $e) {
+               
+               }
+               $material->setFilename($newFilename);
+           }
          }
          if ($data["subject"] != null) {
             $material->setSchoolSubject($data["subject"]);
