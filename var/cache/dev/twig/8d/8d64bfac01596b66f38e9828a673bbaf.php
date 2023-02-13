@@ -124,10 +124,10 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
                 echo "        Předmět : ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 27), "html", null, true);
                 echo "<br />
-        Obsah: ";
+        Obsah: <a href=\"material/";
                 // line 28
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 28), "html", null, true);
-                echo "<br />
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getFilename", [], "method", false, false, false, 28), "html", null, true);
+                echo "\"/> Zde </a>  <br>
         Autor: ";
                 // line 29
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 29), "getUsername", [], "method", false, false, false, 29), "html", null, true);
@@ -163,48 +163,45 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
             $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["materials"]) || array_key_exists("materials", $context) ? $context["materials"] : (function () { throw new RuntimeError('Variable "materials" does not exist.', 38, $this->source); })()), "getAll", [], "method", false, false, false, 38));
             foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
                 // line 39
-                echo "    <a style=\"text-decoration:none; color:black; cursor:pointer\"  onMouseOver=\"this.style.color='gray'\" onMouseOut=\"this.style.color='black'\" href=\"single_material/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getId", [], "method", false, false, false, 39), "html", null, true);
-                echo "\"> 
-        Předmět : ";
+                echo "        Předmět : ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 39), "html", null, true);
+                echo "<br />
+        Obsah:<a href=\"material/";
                 // line 40
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getSchoolSubject", [], "method", false, false, false, 40), "html", null, true);
-                echo "<br />
-        Obsah: ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getFilename", [], "method", false, false, false, 40), "html", null, true);
+                echo "\"/> Zde </a> <br />
+        Autor: <a href=\"profile/";
                 // line 41
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getContent", [], "method", false, false, false, 41), "html", null, true);
-                echo "<br />
-        Autor: ";
-                // line 42
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 42), "getUsername", [], "method", false, false, false, 42), "html", null, true);
-                echo "<br />
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 41), "getUsername", [], "method", false, false, false, 41), "html", null, true);
+                echo "\"> ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 41), "getUsername", [], "method", false, false, false, 41), "html", null, true);
+                echo "</a><br />
         Datum: ";
-                // line 43
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 43), "html", null, true);
+                // line 42
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getDate", [], "method", false, false, false, 42), "html", null, true);
                 echo " <br />
-    </a>
         ";
-                // line 45
-                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 45), "getId", [], "method", false, false, false, 45) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 45, $this->source); })()))) {
-                    // line 46
+                // line 43
+                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "getUser", [], "method", false, false, false, 43), "getId", [], "method", false, false, false, 43) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 43, $this->source); })()))) {
+                    // line 44
                     echo "            <a href=\"edit_material/";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getId", [], "method", false, false, false, 46), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "getId", [], "method", false, false, false, 44), "html", null, true);
                     echo "\"> Upravit </a>
             <br />
         ";
                 }
-                // line 49
+                // line 47
                 echo "        <br />
     ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 50
+            // line 48
             echo " 
 ";
         }
-        // line 52
+        // line 50
         echo "
 
 </html>";
@@ -225,7 +222,7 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
 
     public function getDebugInfo()
     {
-        return array (  208 => 52,  204 => 50,  197 => 49,  190 => 46,  188 => 45,  183 => 43,  179 => 42,  175 => 41,  171 => 40,  166 => 39,  161 => 38,  157 => 36,  150 => 35,  143 => 32,  141 => 31,  137 => 30,  133 => 29,  129 => 28,  124 => 27,  119 => 26,  116 => 25,  114 => 24,  107 => 23,  104 => 22,  101 => 21,  99 => 20,  96 => 19,  93 => 18,  89 => 16,  84 => 15,  80 => 13,  75 => 12,  68 => 11,  65 => 10,  62 => 9,  60 => 8,  56 => 7,  51 => 5,  47 => 4,  45 => 3,  43 => 2,  40 => 1,);
+        return array (  205 => 50,  201 => 48,  194 => 47,  187 => 44,  185 => 43,  181 => 42,  175 => 41,  171 => 40,  166 => 39,  161 => 38,  157 => 36,  150 => 35,  143 => 32,  141 => 31,  137 => 30,  133 => 29,  129 => 28,  124 => 27,  119 => 26,  116 => 25,  114 => 24,  107 => 23,  104 => 22,  101 => 21,  99 => 20,  96 => 19,  93 => 18,  89 => 16,  84 => 15,  80 => 13,  75 => 12,  68 => 11,  65 => 10,  62 => 9,  60 => 8,  56 => 7,  51 => 5,  47 => 4,  45 => 3,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -257,7 +254,7 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
     {% endif %}
     {% for value in array %}
         Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah: {{ value.getContent() }}<br />
+        Obsah: <a href=\"material/{{value.getFilename()}}\"/> Zde </a>  <br>
         Autor: {{ value.getUser().getUsername() }}<br />
         Datum: {{ value.getDate() }} <br />
         {% if (value.getUser().getId() == id ) %}
@@ -268,12 +265,10 @@ class __TwigTemplate_01b7deaeefcb57d5fbcf89e80b31b423 extends Template
     {% endfor %} 
 {% else %}
     {% for value in materials.getAll() %}
-    <a style=\"text-decoration:none; color:black; cursor:pointer\"  onMouseOver=\"this.style.color='gray'\" onMouseOut=\"this.style.color='black'\" href=\"single_material/{{ value.getId() }}\"> 
         Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah: {{ value.getContent() }}<br />
-        Autor: {{ value.getUser().getUsername() }}<br />
+        Obsah:<a href=\"material/{{value.getFilename()}}\"/> Zde </a> <br />
+        Autor: <a href=\"profile/{{ value.getUser().getUsername() }}\"> {{ value.getUser().getUsername() }}</a><br />
         Datum: {{ value.getDate() }} <br />
-    </a>
         {% if (value.getUser().getId() == id ) %}
             <a href=\"edit_material/{{ value.getId() }}\"> Upravit </a>
             <br />

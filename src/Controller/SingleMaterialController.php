@@ -21,7 +21,7 @@ class SingleMaterialController extends AbstractController
          ['id' => $id],
       )[0];
       return $this->render('html/single_material.html.twig', [
-         'material' => $material
+         'material' => $material->getFilename()
       ]);
    }
 }

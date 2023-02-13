@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
    {% include "html/head.html.twig" %}
+   {% if not logged %}
    {% include "html/menu_not_logged.html.twig" %}
+   {% endif %}
+   {% if logged %}
+   {% include "html/menu.html.twig" %}
+   {% endif %}
 <body>
    <h1> Kontakt </h1>
-   
+
    <a href="/homepage"> <button> Domů </button> </a>
 </body>
 </html>

@@ -6,5 +6,17 @@
     <h1 id="profile_name">{{ profile_name }}</h1>
     <p id="profile_email">{{ profile_email }}</p>
     <p id="profile_desc">{{ profile_desc }}</p>
+    <h1> Příspěvky uživatele </h1>
+    {% for value in materials %}
+        Předmět : {{ value.getSchoolSubject() }}<br />
+        Obsah:<a href="material/{{value.getFilename()}}"/> Zde </a> <br />
+        Autor: <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a><br />
+        Datum: {{ value.getDate() }} <br />
+        {% if (value.getUser().getId() == id ) %}
+            <a href="edit_material/{{ value.getId() }}"> Upravit </a>
+            <br />
+        {% endif %}
+        <br />
+    {% endfor %} 
   </body>
 </html>
