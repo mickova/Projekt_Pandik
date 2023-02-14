@@ -1,0 +1,17 @@
+aside {
+  background-color: #95B4EE;
+  width: 350px;
+  height: 100%;
+  border-right: solid 1px black;
+}
+aside ul {
+  padding: 2rem 0 0 0;
+  margin: 0;
+  list-style-type: none;
+}
+aside ul li {
+  color: black;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.3rem 0;
+}/*# sourceMappingURL=aside.css.map */
