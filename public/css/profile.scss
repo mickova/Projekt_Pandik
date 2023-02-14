@@ -1,8 +1,6 @@
 // profile.scss
 @use 'variables';
 .container {
-   width:100%;
-   background-color: variables.$terciary-color;
 
    &_profile-card {
       width: 70%;
@@ -37,14 +35,6 @@
             border-radius: 5px;
             font-size:1.25rem;
          }
-      }
-   }
-   &_materials {
-      margin-left:2rem;
-
-      &_single-material {
-         margin:0.5rem 2rem 0.5rem 0;
-         border:1px solid black;
       }
    }
 }

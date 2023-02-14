@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include "html/head.html.twig" %}
-{% include "html/menu.html.twig" %}
-<body>
-   <h1> Homepage </h1>
-   <a href="/all_materials"> Všechny materiály </a>
-</body>
-</html>
+	{% include "html/head.html.twig" %}
+	{% include "html/menu.html.twig" %}
+	<body>
+		<main class="--with_aside">
+			{% include "html/aside.html.twig" %}
+			<div class="container">
+            <div class="container_short-info">
+				   <h1>Domov</h1>
+				   <a class="--text_decoration"href="/all_materials">
+					   Všechny materiály
+				   </a>
+             </div>
+				<div class="container_materials">
+					{% for value in materials %}
+						<div class="container_materials_single-material">
+							<div class="single-material_header" id="author">
+								<h2 class="author_name">
+									{{value.getUser().getUsername()}}
+								</h2>
+							</div>
+							<div class="single-material_content">
+								Předmět :
+								{{ value.getSchoolSubject() }}<br/>
+								Datum:
+								{{ value.getDate() }}
+								<br/>
+								Obsah:<a href="material/{{value.getFilename()}}"/>
+								Zde
+							</a>
+							<br/>
+
+							{% if (value.getUser().getId() == id ) %}
+								<a href="edit_material/{{ value.getId() }}">
+									Upravit
+								</a>
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html></main></body></html>
