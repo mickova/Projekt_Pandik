@@ -1,11 +1,8 @@
-.container {
-  width: 100%;
-  background-color: #E8E9F3;
-}
 .container_profile-card {
   width: 70%;
-  margin: 2rem auto 0;
+  margin: 2.5rem auto 0;
   border: 1px solid black;
+  border-radius: 7px;
 }
 .container_profile-card_header {
   display: flex;
@@ -26,13 +23,7 @@
   height: 40px;
   background-color: #5386E4;
   color: #E8E9F3;
-  border: none;
+  border: solid 1px black;
+  border-radius: 5px;
   font-size: 1.25rem;
-}
-.container_materials {
-  margin-left: 2rem;
-}
-.container_materials_single-material {
-  margin: 0.5rem 2rem 0.5rem 0;
-  border: 1px solid black;
 }/*# sourceMappingURL=pages.css.map */

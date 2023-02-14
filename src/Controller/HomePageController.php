@@ -19,11 +19,14 @@ class HomePageController extends AbstractController
    #[Route('/homepage', name: "homepage", methods: ['GET', 'POST'])]
    public function homepage(AuthenticationUtils $auth, ManagerRegistry $doctrine, Security $security, Request $request)
    {
+      $materials = new MaterialRepository($doctrine);
       $form = $this->createForm(LoginFormType::class);
       $form->handleRequest($request);
       
       return $this->render('html/homepage.html.twig', [
          'LoginForm' => $form->createView(),
+         'materials' => $materials->getThreeNewest(),
+         'id' => $security->getUser()->getId()
       ]);
    }
 }

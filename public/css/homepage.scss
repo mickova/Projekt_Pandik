@@ -1,1 +1,22 @@
 @use 'variables';
+
+.single-material_header {
+   border-bottom:1px solid black;
+   width:100%;
+
+   .author_name {
+      font-size:1.25rem;
+      padding:1rem;
+      margin:0;
+   }
+}
+
+.single-material_content {
+   padding:0.5rem 1rem;
+}
+
+.container {
+   &_short-info {
+      padding-left:2rem;
+   }
+}

@@ -1,0 +1,18 @@
+a {
+  color: #202020;
+  text-decoration: none;
+}
+a :visited {
+  color: #202020;
+}
+a :hover {
+  cursor: pointer;
+}
+
+.--text_decoration {
+  text-decoration: underline;
+}
+
+p, h1, h2, h3, h4, h5, h6, q, cite, a {
+  color: #202020;
+}/*# sourceMappingURL=typhography.css.map */
