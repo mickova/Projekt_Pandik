@@ -4,6 +4,7 @@
    width: 70%;
    margin: auto;
    border: 1px solid black;
+   border-radius: 7px;
    margin-top: 2rem;
    padding:1rem;
    height:70px;
@@ -30,4 +31,8 @@
 
 #all_material_form {
   height:40px;
+  
+}
+#filter-button{
+   float: right;
 }
