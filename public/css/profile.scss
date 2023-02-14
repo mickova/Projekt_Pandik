@@ -2,18 +2,22 @@
 @use 'variables';
 .container {
    width:100%;
+   background-color: variables.$terciary-color;
 
    &_profile-card {
       width: 70%;
-      margin:2rem auto 0;
+      margin:2.5rem auto 0;
       border:1px solid black;
+      border-radius: 7px;
 
 
       &_header {
          display:flex;
+         
          h1 {
             padding-left:2rem;
             padding-top:1rem;
+            
          }
          a {
             padding-top:2rem;
@@ -29,7 +33,8 @@
             height:40px;
             background-color:variables.$primary-color;
             color: variables.$terciary-color;
-            border:none;
+            border:solid 1px black;
+            border-radius: 5px;
             font-size:1.25rem;
          }
       }

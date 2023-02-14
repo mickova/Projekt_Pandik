@@ -1,7 +1,8 @@
 aside {
-  background-color: #5386E4;
-  width: 300px;
+  background-color: #95B4EE;
+  width: 350px;
   height: 100%;
+  border-right: solid 1px black;
 }
 aside ul {
   padding: 2rem 0 0 0;
@@ -9,8 +10,8 @@ aside ul {
   list-style-type: none;
 }
 aside ul li {
-  color: #E8E9F3;
+  color: black;
   font-size: 1.25rem;
   text-align: center;
-  padding: 0.25rem 0;
+  padding: 0.3rem 0;
 }/*# sourceMappingURL=aside.css.map */

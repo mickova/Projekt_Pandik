@@ -12,20 +12,21 @@
           <a href="/settings"> <button class=""> Nastavení </button> </a>
         </div>
         <div class="container_materials">
-					<h1>
+					<h2>
 						Příspěvky uživatele
-					</h1>
+					</h2>
 					{% for value in materials %}
           <div class="container_materials_single-material">
 						Předmět :
 						{{ value.getSchoolSubject() }}<br/>
+						Datum:
+					{{ value.getDate() }}
+					<br/>
 						Obsah:<a href="material/{{value.getFilename()}}"/>
 						Zde
 					</a>
 					<br/>
-					Datum:
-					{{ value.getDate() }}
-					<br/>
+					
 					{% if (value.getUser().getId() == id ) %}
 						<a href="edit_material/{{ value.getId() }}">
 							Upravit
