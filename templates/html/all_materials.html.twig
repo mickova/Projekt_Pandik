@@ -1,52 +1,99 @@
 <html>
     {% include "html/head.html.twig" %}
+    <body> 
 {% include "html/menu.html.twig" %}
+<main class="--with_aside">
+    {% include "html/aside.html.twig" %}
+    <div class="container">
 {{ form_start(choice_form) }}
 {{ form_widget(choice_form) }}
-<button type="submit" class="button">Filtrovat!</button>
+<button type="submit" class="button" id="filter-button">Filtrovat!</button>
 {{ form_end(choice_form) }}
 {% if subject is defined %}
     {% if subject != "reset" %}
         {% if date1.timestamp is defined and date2.timestamp is defined %}
-            <p> Vše z jedné kategorie mezi daty {{date1.format('d.m.Y')}} -  {{date2.format('d.m.Y')}}</p>
+            
             {%  set array = materials.getSubjectBetweenDates(subject, date1.timestamp, date2.timestamp) %} 
         {% else %} 
-            <p> Příspěvky z jedné kategorie </p>
+            
             {%  set array = materials.getSubject(subject) %} 
         {% endif %} 
     {% endif %}
     {% if subject == "reset" and date1.timestamp is not defined and date2.timestamp is not defined %}
-        <p> Všechny příspěvky </p>
+        
         {%  set array = materials.getAll() %}
     {% endif %}
     {% if subject == "reset" and date1.timestamp is defined and date2.timestamp is defined %}
-        <p> Všechny příspěvky mezi daty {{date1.format('d.m.Y')}} -  {{date2.format('d.m.Y')}}</p>
+        
         {% set array = materials.getEverythingBetweenDates(date1.timestamp, date2.timestamp) %}
     {% endif %}
+    <div class="container_materials">
+        <h2>
+            Výsledné příspěvky 
+        </h2>
     {% for value in array %}
-        Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah: <a href="materials/{{value.getFilename()}}"/> Zde </a>  <br>
-        Autor: {{ value.getUser().getUsername() }}<br />
-        Datum: {{ value.getDate() }} <br />
+<div class="container_materials_single-material">
+<!--Pokus o přidání autora-->
+            <div class="single-material_header" id="author">
+				<h2 class="author_name">
+					<a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a>
+									
+				</h2>
+			</div>
+<!--Konec pokusu o přidání autora, začátek pokusu o přidání těch věcí do divu s class="single-material_content"-->
+            <div class="single-material_content">
+            Předmět :
+            {{ value.getSchoolSubject() }}<br/>
+            Datum:
+        {{ value.getDate() }}
+        <br/>
+            Obsah:<a href="material/{{value.getFilename()}}"/>
+            Zde
+        </a>
+        </div>
+        <!--Konec pokusů-->
+        <br/>
+        
         {% if (value.getUser().getId() == id ) %}
-            <a href="edit_material/{{ value.getId() }}"> Upravit </a>
-            <br />
+            <a href="edit_material/{{ value.getId() }}">
+                Upravit
+            </a>
+            <br/>
         {% endif %}
-        <br />
-    {% endfor %} 
+        <br/>
+</div>
+    {% endfor %}
+</div>
 {% else %}
-    {% for value in materials.getAll() %}
-        Předmět : {{ value.getSchoolSubject() }}<br />
-        Obsah:<a href="materials/{{value.getFilename()}}"/> Zde </a> <br />
-        Autor: <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a><br />
-        Datum: {{ value.getDate() }} <br />
-        {% if (value.getUser().getId() == id ) %}
-            <a href="edit_material/{{ value.getId() }}"> Upravit </a>
-            <br />
-        {% endif %}
-        <br />
-    {% endfor %} 
+<div class="container_materials">
+    <h2>
+        Příspěvky uživatele
+    </h2>
+{% for value in materials.getAll() %}
+<div class="container_materials_single-material">
+        Předmět :
+        {{ value.getSchoolSubject() }}<br/>
+        Datum:
+    {{ value.getDate() }}
+    <br/>
+        Obsah:<a href="material/{{value.getFilename()}}"/>
+        Zde
+    </a>
+    <br/>
+    
+    {% if (value.getUser().getId() == id ) %}
+        <a href="edit_material/{{ value.getId() }}">
+            Upravit
+        </a>
+        <br/>
+    {% endif %}
+    <br/>
+</div>
+{% endfor %}
+</div>
+ </div>
 {% endif %}
-
+</main>
+</body>
 
 </html>

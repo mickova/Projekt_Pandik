@@ -1,0 +1,33 @@
+[name=all_material_form] {
+  width: 70%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 7px;
+  margin-top: 2rem;
+  padding: 1rem;
+  height: 70px;
+}
+[name=all_material_form] div:nth-child(1) div:nth-child(2) {
+  float: right;
+  margin-left: 1rem;
+}
+[name=all_material_form] div:nth-child(1) div:nth-child(3) {
+  float: right;
+  margin-left: 1rem;
+}
+[name=all_material_form] div:nth-child(1) div:nth-child(1) {
+  float: left;
+}
+[name=all_material_form] button {
+  height: 30px;
+  width: 80px;
+  font-size: 1rem;
+}
+
+#all_material_form {
+  height: 40px;
+}
+
+#filter-button {
+  float: right;
+}/*# sourceMappingURL=all_materials.css.map */
