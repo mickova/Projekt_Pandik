@@ -17,13 +17,4 @@
 }
 .container_profile-card_header a, .container_profile-card_header button {
   margin-left: auto;
-}
-.container_profile-card_header button {
-  width: 125px;
-  height: 40px;
-  background-color: #5386E4;
-  color: #E8E9F3;
-  border: solid 1px black;
-  border-radius: 5px;
-  font-size: 1.25rem;
 }/*# sourceMappingURL=profile.css.map */

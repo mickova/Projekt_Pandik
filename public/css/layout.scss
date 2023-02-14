@@ -48,14 +48,23 @@ nav {
       &_single-material {
          margin:1.5rem 2rem 1.5rem 0;
          border:1px solid black;
-         
       }
    }
 }
 .--with_aside {
    display: flex;
 }
+
 .material-source-link{
    text-decoration: underline;
-         color: black;
+   color: variables.$primary-text;
+}
+button {
+   width:125px;
+   height:40px;
+   background-color:variables.$primary-color;
+   color: variables.$terciary-color;
+   border:solid 1px black;
+   border-radius: 5px;
+   font-size:1.25rem;
 }
