@@ -17,7 +17,8 @@
 						<div class="container_materials_single-material">
 							<div class="single-material_header" id="author">
 								<h2 class="author_name">
-									{{value.getUser().getUsername()}}
+								<a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a>
+									
 								</h2>
 							</div>
 							<div class="single-material_content">
@@ -26,7 +27,7 @@
 								Datum:
 								{{ value.getDate() }}
 								<br/>
-								Obsah:<a href="material/{{value.getFilename()}}"/>
+								Obsah:<a class="material-source-link" href="material/{{value.getFilename()}}"/>
 								Zde
 							</a>
 							<br/>

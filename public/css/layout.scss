@@ -48,9 +48,14 @@ nav {
       &_single-material {
          margin:1.5rem 2rem 1.5rem 0;
          border:1px solid black;
+         
       }
    }
 }
 .--with_aside {
    display: flex;
+}
+.material-source-link{
+   text-decoration: underline;
+         color: black;
 }

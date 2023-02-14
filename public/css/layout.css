@@ -47,4 +47,9 @@ nav_heading_navbar {
 
 .--with_aside {
   display: flex;
+}
+
+.material-source-link {
+  text-decoration: underline;
+  color: black;
 }/*# sourceMappingURL=layout.css.map */
