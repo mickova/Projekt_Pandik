@@ -1,0 +1,44 @@
+<html>
+    {% include "html/head.html.twig" %}
+    <body> 
+{% include "html/menu.html.twig" %}
+<main class="--with_aside">
+    {% include "html/aside.html.twig" %}
+    <div class="container">
+    <div class="container_materials">
+        <h2>
+            Příspěvky z předmětu {{subject_name}}
+        </h2>
+        {% for value in materials %}
+        <div class="container_materials_single-material">
+            <div class="single-material_header" id="author">
+                <h2 class="author_name">
+                    <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a>	
+                </h2>
+            </div>
+            <div class="single-material_content">
+                Předmět :
+                {{ value.getSchoolSubject() }}<br/>
+                Datum:
+            {{ value.getDate() }}
+            <br/>
+                Obsah:<a href="material/{{value.getFilename()}}"/>
+                Zde
+            </a>
+            <br/>
+            
+            {% if (value.getUser().getId() == id ) %}
+                <a href="edit_material/{{ value.getId() }}">
+                    Upravit
+                </a>
+            {% endif %}
+            
+            </div>
+        </div>
+        {% endfor %}
+</div> 
+</div>   
+</main>
+</body>
+
+</html>

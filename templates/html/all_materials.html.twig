@@ -33,34 +33,28 @@
         </h2>
     {% for value in array %}
 <div class="container_materials_single-material">
-<!--Pokus o přidání autora-->
             <div class="single-material_header" id="author">
 				<h2 class="author_name">
-					<a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a>
-									
+					<a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a>	
 				</h2>
 			</div>
-<!--Konec pokusu o přidání autora, začátek pokusu o přidání těch věcí do divu s class="single-material_content"-->
             <div class="single-material_content">
             Předmět :
             {{ value.getSchoolSubject() }}<br/>
             Datum:
         {{ value.getDate() }}
         <br/>
-            Obsah:<a href="material/{{value.getFilename()}}"/>
+            Obsah:<a class="material-source-link" href="material/{{value.getFilename()}}"/>
             Zde
         </a>
         </div>
-        <!--Konec pokusů-->
         <br/>
-        
         {% if (value.getUser().getId() == id ) %}
             <a href="edit_material/{{ value.getId() }}">
                 Upravit
             </a>
-            <br/>
+            
         {% endif %}
-        <br/>
 </div>
     {% endfor %}
 </div>
@@ -71,6 +65,12 @@
     </h2>
 {% for value in materials.getAll() %}
 <div class="container_materials_single-material">
+    <div class="single-material_header" id="author">
+        <h2 class="author_name">
+            <a href="profile/{{ value.getUser().getUsername() }}"> {{ value.getUser().getUsername() }}</a>	
+        </h2>
+    </div>
+    <div class="single-material_content">
         Předmět :
         {{ value.getSchoolSubject() }}<br/>
         Datum:
@@ -85,9 +85,8 @@
         <a href="edit_material/{{ value.getId() }}">
             Upravit
         </a>
-        <br/>
     {% endif %}
-    <br/>
+    </div>
 </div>
 {% endfor %}
 </div>

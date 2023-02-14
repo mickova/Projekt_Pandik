@@ -20,6 +20,13 @@ class MaterialPageController extends AbstractController
    #[Route('/all_materials', name: "all_materials", methods: ['GET', 'POST'])]
    public function homepage(ManagerRegistry $doctrine, Security $security, Request $request)
    {
+      $pref_subject = "";
+      try {
+         $pref_subject = $_GET["pref_subject"];
+         $pref_subject = str_replace(" ", "", $pref_subject);
+      } catch(\Exception $e) {
+
+      }
       $user = $security->getUser();
       $id = $user->getId();
       $subject = "reset";
@@ -46,7 +53,8 @@ class MaterialPageController extends AbstractController
                'subject' => $subject,
                'date1' => $date1,
                'date2'=> $date2,
-               'id' => $id
+               'id' => $id,
+               'pref_subject'=> $pref_subject
             ]);
          }
          $view =  $form->createView();
@@ -57,14 +65,16 @@ class MaterialPageController extends AbstractController
             'subject' => $subject,
             'date1' => $date1,
             'date2' => $date2,
-            'id' => $id
+            'id' => $id,
+            'pref_subject' => $pref_subject
          ]);
       }
 
       return $this->render('html/all_materials.html.twig', [
          'materials' => $this->materialRepository,
          'choice_form' => $form->createView(),
-         'id' => $id
+         'id' => $id,
+         'pref_subject' => $pref_subject
       ]);
    }
 }
