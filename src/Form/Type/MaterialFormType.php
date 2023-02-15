@@ -13,7 +13,17 @@ class MaterialFormType extends AbstractType
 {
    public function buildForm(FormBuilderInterface $builder, array $options)
    {
-      $builder
+      $builder->
+      add('subject', ChoiceType::class, [
+         'choices'  => [
+            'Český jazyk' => 'Český jazyk',
+            'Programové vybavení' => 'Programové vybavení',
+            'Počítačové sítě a systémy' => 'Počítačové sítě a systémy',
+            'Matematika' => 'Matematika',
+            'Databázové systémy' => 'Databázové systémy',
+            'Webové aplikace' => 'Webové aplikace',
+         ], "label" => "Maturitní předmět"
+      ])
          ->add('content', FileType::class,['constraints' => [
             new File([
                'maxSize' => '1024k',
@@ -23,16 +33,6 @@ class MaterialFormType extends AbstractType
                ],
                'mimeTypesMessage' => 'Vložte prosím validní PDF soubor',
            ])
-        ],])->
-         add('subject', ChoiceType::class, [
-            'choices'  => [
-               'Český jazyk' => 'Český jazyk',
-               'Programové vybavení' => 'Programové vybavení',
-               'Počítačové sítě a systémy' => 'Počítačové sítě a systémy',
-               'Matematika' => 'Matematika',
-               'Databázové systémy' => 'Databázové systémy',
-               'Webové aplikace' => 'Webové aplikace',
-            ]
-         ]);
+        ],"label" => "Materiál"]);
    }
 }

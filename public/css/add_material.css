@@ -1,0 +1,40 @@
+.form_add-material {
+  padding-left: 2rem;
+  text-align: center;
+}
+
+[name|=material_form] {
+  display: flex;
+  width: 480px;
+  height: 260px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: auto;
+  flex-direction: column;
+}
+[name|=material_form] button {
+  margin: auto;
+  cursor: pointer;
+}
+
+#material_form div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  justify-content: center;
+}
+#material_form div input, #material_form div select {
+  margin-left: 1rem;
+  justify-self: center;
+  margin: auto;
+}
+#material_form div input {
+  height: 25px;
+}
+#material_form div label {
+  margin: 0.5rem 0 1rem 1rem;
+}
+#material_form div:nth-child(1) select {
+  width: 200px;
+}/*# sourceMappingURL=add_material.css.map */

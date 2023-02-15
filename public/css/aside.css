@@ -1,7 +1,7 @@
 aside {
   background-color: #95B4EE;
   width: 350px;
-  height: 100%;
+  min-height: 100vh;
   border-right: solid 1px black;
 }
 aside ul {

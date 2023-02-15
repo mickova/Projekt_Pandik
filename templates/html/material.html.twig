@@ -1,8 +1,17 @@
-<html> 
-{% include "html/head.html.twig" %}
-<p>Vložte materiál</p>
-{{ form_start(materialForm) }}
-{{ form_widget(materialForm) }}
-<button type="submit" class="button">Přidat!</button>
-{{ form_end(materialForm) }}
+<!DOCTYPE html>
+<html>
+  {% include "html/head.html.twig" %}
+  <body>
+   {% include "html/menu.html.twig" %}
+    <main class="--with_aside">
+      {% include "html/aside.html.twig" %}
+      <div class="container form_add-material">
+        <h1>Vložte materiál</h1>
+        {{ form_start(materialForm) }}
+        {{ form_widget(materialForm) }}
+        <button type="submit" class="button">Přidat!</button>
+        {{ form_end(materialForm) }}
+      </div>
+    </main>
+  </body>
 </html>

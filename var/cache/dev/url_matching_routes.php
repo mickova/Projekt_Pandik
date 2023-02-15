@@ -26,16 +26,14 @@ return [
                 .'|/edit_material/([^/]++)(*:65)'
                 .'|/all_materials/([^/]++)(*:95)'
                 .'|/profile/([^/]++)(*:119)'
-                .'|/single_material/([^/]++)(*:152)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         65 => [[['_route' => 'edit_material', '_controller' => 'App\\Controller\\MaterialEditController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         95 => [[['_route' => 'single_material_category', '_controller' => 'App\\Controller\\MaterialSingleSubjectController::homepage'], ['subject'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        119 => [[['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::profile'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        152 => [
-            [['_route' => 'single_material', '_controller' => 'App\\Controller\\SingleMaterialController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+        119 => [
+            [['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::profile'], ['name'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
