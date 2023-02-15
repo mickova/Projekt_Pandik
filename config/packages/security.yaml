@@ -7,7 +7,7 @@ security:
     app_user_provider:
       entity:
         class: App\Entity\User
-        property: email
+        property: username
     # used to reload user from session & other features (e.g. switch_user)
   firewalls:
     dev:
@@ -21,7 +21,7 @@ security:
         login_path: login
         check_path: login
         default_target_path: homepage
-        username_parameter: login_form[email]
+        username_parameter: login_form[username]
         password_parameter: login_form[password]
       logout:
         path: logout
