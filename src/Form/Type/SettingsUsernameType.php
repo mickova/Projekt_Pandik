@@ -7,13 +7,12 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-class SettingsFormType extends AbstractType
+class SettingsUsernameType extends AbstractType
 {
    public function buildForm(FormBuilderInterface $builder, array $options)
    {
       $builder
-         ->add('email', TextType::class, array('required' => false))
-         ->add('password', PasswordType::class, array('required' => false))
-         ->add('username', TextType::class, array('required' => false));
+         ->add('password', PasswordType::class, array('required' => false, "label" => "Současné heslo"))
+         ->add('username', TextType::class, array('required' => false, "label" => "Nové jméno"));
    }
 }

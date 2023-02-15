@@ -1,7 +1,7 @@
 html,
 body,
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 66px);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -45,10 +45,6 @@ nav_heading_navbar {
   border: 1px solid black;
 }
 
-.--with_aside {
-  display: flex;
-}
-
 .material-source-link {
   text-decoration: underline;
   color: #202020;
@@ -62,4 +58,16 @@ button {
   border: solid 1px black;
   border-radius: 5px;
   font-size: 1.25rem;
+}
+
+.--with_aside {
+  display: flex;
+}
+
+.--flex {
+  display: flex;
+}
+
+.--mt1 {
+  margin-top: 1rem;
 }/*# sourceMappingURL=layout.css.map */

@@ -304,7 +304,10 @@
     <service id="App\Form\Type\RegisterFormType" class="App\Form\Type\RegisterFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="App\Form\Type\SettingsFormType" class="App\Form\Type\SettingsFormType" autowire="true" autoconfigure="true">
+    <service id="App\Form\Type\SettingsPasswordType" class="App\Form\Type\SettingsPasswordType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\Type\SettingsUsernameType" class="App\Form\Type\SettingsUsernameType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\MaterialRepository" class="App\Repository\MaterialRepository" autowire="true" autoconfigure="true">
@@ -871,7 +874,8 @@
         <argument>App\Form\Type\LoginFormType</argument>
         <argument>App\Form\Type\MaterialFormType</argument>
         <argument>App\Form\Type\RegisterFormType</argument>
-        <argument>App\Form\Type\SettingsFormType</argument>
+        <argument>App\Form\Type\SettingsPasswordType</argument>
+        <argument>App\Form\Type\SettingsUsernameType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1868,7 +1872,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.WaBIUgr"/>
+      <argument type="service" id=".service_locator.2OqSqtW"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4038,8 +4042,10 @@
     <service id=".abstract.instanceof.App\Form\Type\MaterialFormType" class="App\Form\Type\MaterialFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\RegisterFormType" class="App\Form\Type\RegisterFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\Type\RegisterFormType" class="App\Form\Type\RegisterFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\SettingsFormType" class="App\Form\Type\SettingsFormType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\Type\SettingsFormType" class="App\Form\Type\SettingsFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\SettingsPasswordType" class="App\Form\Type\SettingsPasswordType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\Type\SettingsPasswordType" class="App\Form\Type\SettingsPasswordType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Type\SettingsUsernameType" class="App\Form\Type\SettingsUsernameType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\Type\SettingsUsernameType" class="App\Form\Type\SettingsUsernameType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MaterialRepository" class="App\Repository\MaterialRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\MaterialRepository" class="App\Repository\MaterialRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
@@ -4533,14 +4539,15 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.WaBIUgr" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.2OqSqtW" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\Type\All_MaterialFormType" type="service_closure" id="App\Form\Type\All_MaterialFormType"/>
         <argument key="App\Form\Type\LoginFormType" type="service_closure" id="App\Form\Type\LoginFormType"/>
         <argument key="App\Form\Type\MaterialFormType" type="service_closure" id="App\Form\Type\MaterialFormType"/>
         <argument key="App\Form\Type\RegisterFormType" type="service_closure" id="App\Form\Type\RegisterFormType"/>
-        <argument key="App\Form\Type\SettingsFormType" type="service_closure" id="App\Form\Type\SettingsFormType"/>
+        <argument key="App\Form\Type\SettingsPasswordType" type="service_closure" id="App\Form\Type\SettingsPasswordType"/>
+        <argument key="App\Form\Type\SettingsUsernameType" type="service_closure" id="App\Form\Type\SettingsUsernameType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -5528,7 +5535,7 @@
     <service id=".service_locator.t1Imjr9" alias=".service_locator.gLKJlzL"/>
     <service id=".service_locator.kcq9w5x" alias=".service_locator.3.8Dgz3"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
-    <service id=".service_locator.28Pjs58" alias=".service_locator.WaBIUgr"/>
+    <service id=".service_locator.vKszECL" alias=".service_locator.2OqSqtW"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>

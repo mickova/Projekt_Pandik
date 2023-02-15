@@ -4,7 +4,7 @@
 html,
 body,
 main {
-   min-height: 100vh;
+   min-height: calc(100vh - 66px);
    width: 100%;
    margin: 0;
    padding: 0;
@@ -51,9 +51,6 @@ nav {
       }
    }
 }
-.--with_aside {
-   display: flex;
-}
 
 .material-source-link{
    text-decoration: underline;
@@ -68,4 +65,16 @@ button {
    border:solid 1px black;
    border-radius: 5px;
    font-size:1.25rem;
+}
+
+.--with_aside {
+   display: flex;
+}
+
+.--flex {
+   display:flex;
+}
+
+.--mt1 {
+margin-top:1rem;
 }
