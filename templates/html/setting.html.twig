@@ -1,9 +1,30 @@
 <html>
-   {% include "html/head.html.twig" %}
-   {% include "html/menu.html.twig" %}
-   <h1>Nastavení</h1>
-   {{ form_start(settings) }}
-   {{ form_widget(settings) }}
-   <button type="submit" class="button">Nastavit</button>
-   {{ form_end(settings) }}
+  {% include "html/head.html.twig" %}
+  <body>
+    {% include "html/menu.html.twig" %}
+    <main class="--with_aside">
+      {% include "html/aside.html.twig" %}
+      <div class="container --flex">
+        <div class="container_profile">
+          <div class="container_profile_header">
+            <h1>Nastavení</h1>
+          </div>
+          <div class="container_profile_content">
+            
+            {{ form_start(settings) }}
+            <h2> Změnit jméno </h2>
+            {{ form_widget(settings) }}
+            <button type="submit" class="button --mt1">Nastavit</button>
+            {{ form_end(settings) }}
+              
+            {{ form_start(settings2) }}
+            <h2> Změnit heslo </h2>
+            {{ form_widget(settings2) }}
+            <button type="submit" class="button --mt1">Nastavit</button>
+            {{ form_end(settings2) }}
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
