@@ -17,6 +17,5 @@ return [
     'my_profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::my_profile'], [], [['text', '/profile']], [], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\RegisterFormController::test'], [], [['text', '/register']], [], [], []],
     'settings' => [[], ['_controller' => 'App\\Controller\\SettingFormController::new'], [], [['text', '/settings']], [], [], []],
-    'single_material' => [['id'], ['_controller' => 'App\\Controller\\SingleMaterialController::new'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/single_material']], [], [], []],
     'welcome_page' => [[], ['_controller' => 'App\\Controller\\WelcomePageController::homepage'], [], [['text', '/']], [], [], []],
 ];

@@ -61,7 +61,7 @@
 {% else %}
 <div class="container_materials">
     <h2>
-        Příspěvky uživatele
+        Výsledné příspěvky 
     </h2>
 {% for value in materials.getAll() %}
 <div class="container_materials_single-material">
@@ -76,7 +76,7 @@
         Datum:
     {{ value.getDate() }}
     <br/>
-        Obsah:<a href="materials/{{value.getFilename()}}"/>
+        Obsah:<a class="material-source-link" href="materials/{{value.getFilename()}}"/>
         Zde
     </a>
     <br/>

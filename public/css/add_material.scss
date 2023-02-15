@@ -5,8 +5,8 @@
 
 [name|="material_form"] {
    display:flex;
-   width:400px;
-   height:240px;
+   width:480px;
+   height:260px;
    border:1px solid black;
    border-radius:1rem;
    margin:auto;
@@ -15,6 +15,7 @@
    button {
       margin:auto;
       cursor: pointer;
+      
    }
 
 }
@@ -25,16 +26,22 @@
       flex-direction:column;
       font-size:1.5rem;
       padding:0.5rem 0;
+      justify-content: center;
+      
 
       input,select {
          margin-left:1rem;
+         justify-self: center;
+         margin: auto;
       }
       input {
          height:25px;
+         
       }
 
       label {
-         margin:0.5rem 0 1rem 0;
+         margin:0.5rem 0 1rem 1rem;
+         
       }
    }
    div:nth-child(1) {
