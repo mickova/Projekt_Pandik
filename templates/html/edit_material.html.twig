@@ -1,10 +1,20 @@
-<html> 
-{% include "html/head.html.twig" %}
-<p>Upravte materiál</p>
-{{ form_start(materialForm) }}
-{{ form_widget(materialForm) }}
-<button type="submit" class="button">Přidat!</button>
-{{ form_end(materialForm) }}
+<html>
+  {% include "html/head.html.twig" %}
+  <body>
+    {% include "html/menu.html.twig" %}
+    <main class="--with_aside">
+      {% include "html/aside.html.twig" %}
+      <div class="container">
+        <div class="container_edit-material">
+          <h1 style="text-align: center">Upravte materiál</h1>
+          {{ form_start(materialForm) }}
+          {{ form_widget(materialForm) }}
+          <button type="submit" class="button">Přidat!</button>
+          {{ form_end(materialForm) }}
 
-<a href="/all_materials"> <button> Zpátky </button> </a>
+          <a href="/all_materials" id="back"> <button>Zpátky</button> </a>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

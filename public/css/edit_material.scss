@@ -1,0 +1,15 @@
+.container {
+   &_edit-material {
+
+      button {
+         margin-left:1rem;
+      }
+      #back {
+
+         button {
+            margin-top:3rem;
+            cursor:pointer;
+         }
+      }
+   }
+}

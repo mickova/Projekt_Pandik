@@ -2,19 +2,18 @@
   width: 90%;
   margin: auto;
   border: 1px solid black;
-  border-radius: 7px;
 }
 .container_profile_header {
   height: 50px;
   border-bottom: 1px solid black;
 }
 .container_profile_header h1 {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .container_profile_content {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem 2rem;
 }
 .container_profile_content h2 {
