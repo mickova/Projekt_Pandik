@@ -54,10 +54,10 @@ class MaterialFormController extends AbstractController
          $material->setPath("");
          $entityManager->persist($material);
          $entityManager->flush($material);
-         $material->setPath("single_material/" . $material->getId());
+         $material->setPath("materials/" . $material->getId());
          $entityManager->persist($material);
          $entityManager->flush($material);
-         $filesystem->dumpFile("single_material/" . $material->getId(), $data["content"]);
+         $filesystem->dumpFile("materials/" . $material->getId(), $data["content"]);
          return $this->redirect("/homepage");
       }
       return $this->render('html/material.html.twig', [

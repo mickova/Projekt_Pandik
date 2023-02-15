@@ -1,0 +1,46 @@
+.form_add-material{
+   padding-left:2rem;
+   text-align:center;
+} 
+
+[name|="material_form"] {
+   display:flex;
+   width:400px;
+   height:240px;
+   border:1px solid black;
+   border-radius:1rem;
+   margin:auto;
+   flex-direction:column;
+
+   button {
+      margin:auto;
+      cursor: pointer;
+   }
+
+}
+#material_form {
+   
+   div {
+      display:flex;
+      flex-direction:column;
+      font-size:1.5rem;
+      padding:0.5rem 0;
+
+      input,select {
+         margin-left:1rem;
+      }
+      input {
+         height:25px;
+      }
+
+      label {
+         margin:0.5rem 0 1rem 0;
+      }
+   }
+   div:nth-child(1) {
+      
+      select {
+         width:200px;
+      }
+   }
+}
