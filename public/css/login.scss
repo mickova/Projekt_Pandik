@@ -1,0 +1,44 @@
+.container {
+   &_login {
+
+   }
+}
+.login {
+   height:calc(100vh - 66px);
+   display:flex;
+   justify-content: center;
+   align-items:center;
+}
+#login_form {
+
+   div {
+      display:flex;
+      justify-content: space-between;
+      margin:1rem;
+   }
+
+   input {
+      height:35px;
+      width:250px;
+   }
+   
+   label {
+      margin-top:0.5rem;
+      padding-right:2rem;
+   }
+}
+[name = "login_form"] {
+   a {
+      float:right;
+      margin-right:1rem;
+   }
+}
+.container_login_info {
+   display:flex;
+   flex-direction: column;
+   align-items:end;
+
+   button {
+      margin-right:1rem;
+   }
+}
