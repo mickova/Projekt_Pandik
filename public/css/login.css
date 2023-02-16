@@ -1,8 +1,19 @@
+.container_login {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 2rem;
+  margin-bottom: 15rem;
+}
+
 .login {
   height: calc(100vh - 66px);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.login h2 {
+  color: #202020;
 }
 
 #login_form div {

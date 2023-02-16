@@ -1,6 +1,11 @@
+@use "variables";
+
 .container {
    &_login {
-
+      border:1px solid black;
+      border-radius: 7px;
+      padding: 2rem;
+      margin-bottom: 15rem;
    }
 }
 .login {
@@ -8,6 +13,11 @@
    display:flex;
    justify-content: center;
    align-items:center;
+   flex-direction: column;
+
+   h2{
+      color: variables.$primary-text;
+   }
 }
 #login_form {
 
@@ -40,5 +50,6 @@
 
    button {
       margin-right:1rem;
+      
    }
 }
