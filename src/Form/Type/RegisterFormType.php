@@ -13,8 +13,9 @@ class RegisterFormType extends AbstractType
    public function buildForm(FormBuilderInterface $builder, array $options)
    {
       $builder
-         ->add('email', EmailType::class, array("label" => "Emailová adresa"))
-         ->add('password', PasswordType::class, array("label" => "Heslo"))
-         ->add('username', TextType::class, array("label" => "Uživatelské jméno"));
+      ->add('email', EmailType::class, array("label" => "Emailová adresa"))
+       ->add('username', TextType::class, array("label" => "Uživatelské jméno"))
+       ->add('password', PasswordType::class, array("label" => "Heslo"))
+      ->add('password_confirm', PasswordType::class, array("label" => "Potvrzení hesla"));
    }
 }
