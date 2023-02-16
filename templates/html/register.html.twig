@@ -5,6 +5,7 @@
   <body>
     <main>
       <div class="container login">
+        <h2>Zaregistrujte se</h2>
         <div class="container_login">
           {{ form_start(RegisterForm) }}
           {{ form_row(RegisterForm.email) }}
@@ -18,8 +19,8 @@
           {% endif %}
           {{ form_row(RegisterForm.password_confirm) }}
           <div class="container_login_info">
-            <a> Zapomněli jste heslo? </a> <br />
-            <button type="submit" class="button">Přihlásit!</button>
+            
+            <button type="submit" class="button">Registrovat!</button>
           </div>
           {{ form_end(RegisterForm) }}
         </div>
