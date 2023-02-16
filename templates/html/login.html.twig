@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-   {% include "html/head.html.twig" %}
-   {% include "html/menu_not_logged.html.twig" %}
+  {% include "html/head.html.twig" %} {% include
+  "html/menu_not_logged.html.twig" %}
   <body>
-    <h1>Login</h1>
-    {{ form_start(LoginForm) }}
-    {{ form_widget(LoginForm) }}
-    <button type="submit" class="button">Přihlásit!</button>
-    {{ form_end(LoginForm) }}
+    <main>
+      <div class="container login">
+        <h2>Přihlaste se</h2>
+        <div class="container_login">
+          {{ form_start(LoginForm) }}
+          {{ form_widget(LoginForm) }}
+          <div class="container_login_info">
+            <a> Zapomněli jste heslo? </a> <br />
+            <button type="submit" class="button">Přihlásit!</button>
+          </div>
+          {{ form_end(LoginForm) }}
+        </div>
+      </div>
+    </main>
   </body>
 </html>
