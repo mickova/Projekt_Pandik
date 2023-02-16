@@ -6,6 +6,7 @@ use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use App\Entity\User;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\Type\RegisterFormType;
@@ -22,8 +23,26 @@ class RegisterFormController extends AbstractController
          $data = array();
          $data = $form->getData();
          $user = new User();
+         $repository = $doctrine->getRepository(User::class);
+         
          $user->setEmail($data["email"]);
          $plaintextPassword = $data["password"];
+         $confirm_pass = $data["password_confirm"];
+         if ($repository->findBy(['username' => $data["username"]])) {
+            return $this->render("html/register.html.twig", [
+               'RegisterForm' => $form->createView(),
+               'ErrorMessUsername' => "Vaše jméno je již zabráno"
+            ]);
+            return;
+         }
+         
+         if($plaintextPassword !=$confirm_pass) {
+            return $this->render("html/register.html.twig", [
+               'RegisterForm' => $form->createView(),
+               'ErrorMessPassword' => "Vaše hesla se neshodují"
+            ]);
+         }
+         
          $hashedPassword = $passwordHasher->hashPassword($user, $plaintextPassword);
          $user->setPassword($hashedPassword);
          $user->setUsername($data["username"]);

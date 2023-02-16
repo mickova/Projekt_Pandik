@@ -5,6 +5,10 @@
   margin-bottom: 15rem;
 }
 
+.container h2 {
+  color: #202020;
+}
+
 .login {
   height: calc(100vh - 66px);
   display: flex;
@@ -12,20 +16,16 @@
   align-items: center;
   flex-direction: column;
 }
-.login h2 {
-  color: #202020;
-}
-
-#login_form div {
+#login_form div, #register_form div, [name=register_form] div {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
 }
-#login_form input {
+#login_form input, #register_form input, [name=register_form] input {
   height: 35px;
   width: 250px;
 }
-#login_form label {
+#login_form label, #register_form label, [name=register_form] label {
   margin-top: 0.5rem;
   padding-right: 2rem;
 }
