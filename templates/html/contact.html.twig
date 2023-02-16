@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-   {% include "html/head.html.twig" %}
-   {% if not logged %}
-   {% include "html/menu_not_logged.html.twig" %}
-   {% endif %}
-   {% if logged %}
-   {% include "html/menu.html.twig" %}
-   {% endif %}
-<body>
-   <h1> Kontakt </h1>
-
-   <a href="/homepage"> <button> Domů </button> </a>
-</body>
+  {% include "html/head.html.twig" %} {% if not logged %} {% include
+  "html/menu_not_logged.html.twig" %} {% endif %} {% if logged %} {% include
+  "html/menu.html.twig" %} {% endif %}
+  <body>
+    <main>
+      <div class="container">
+        <div class="container_upper">
+          <div class="container_upper_text">
+            <h1>Tento web pro vás vytvořili a spravují</h1>
+            <h2>SPŠE Ječná Cats Team</h2>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="photo">
+                <img
+                  src="https://media.discordapp.net/attachments/1068461341519654912/1075823094658240552/image.png"
+                />
+              </div>
+              <h3>Zuzana Míčková</h3>
+            </div>
+            <div class="card">
+              <div class="photo">
+                <img
+                  src="https://media.discordapp.net/attachments/1068461341519654912/1075824816126443591/image.png"
+                />
+              </div>
+              <h3>Matyáš Lorenz</h3>
+            </div>
+            <div class="card">
+              <div class="photo">
+                <img
+                  src="https://media.discordapp.net/attachments/1068461341519654912/1075824377825853450/image.png"
+                />
+              </div>
+              <h3>Čoltěch Vojtovský</h3>
+            </div>
+            <div class="card">
+              <div class="photo">
+                <img
+                  src="https://media.discordapp.net/attachments/1068461341519654912/1075780608103546920/image.png"
+                />
+              </div>
+              <h3>Lukáš Rathauský</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container_message">
+          <div class="container_message_header">
+            <h2>Napište nám!</h2>
+          </div>
+          
+          {{ form_start(ContactForm) }}
+          <div class="container_message_input">
+            {{ form_row(ContactForm.email) }}
+          </div>
+          
+          <div class="container_message_input">
+          
+            {{ form_row(ContactForm.message) }}
+            
+          </div>
+          
+          <div id="submit"> <button type="submit" class="button" >Odeslat!</button></div>
+          {{ form_end(ContactForm) }}
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
