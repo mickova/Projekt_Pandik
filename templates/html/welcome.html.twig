@@ -2,14 +2,17 @@
 <html lang="en">
   {% include "html/head.html.twig" %}
   <body>
-    <nav>
-      <div class="icon">LogOwO</div>
-      <h1>Projekt pandík</h1>
-    </nav>
-    <div class="">
-      <a href="/login">Login</a>
-      <a href="/register">Registrace</a>
-      <a href="/contact"> Kontakt </a>
+    {% include "html/menu_not_logged.html.twig" %}
+    <div class="container">
+      <div class="container_welcome">
+        <h1>Vítejte na projektu Pandik!</h1>
+        <p class="container_welcome_info">
+          Pandík je projekt pro sdílení ověřených maturitních materiálů.
+          Ušetřete čas a získávejte ty nejlepší studijní materiály ze všech
+          oborů. Registrovat se můžete jednoduše a zdarma.
+        </p>
+        <p class="container_welcome_info"> Projekt Pandik vznikl s cílem pomoci studentům získat kvalitní materiály pro maturitu z jednoho místa. Naše platforma umožňuje ověřování zdrojů a filtrování materiálů, což znamená, že můžete snadno najít to, co potřebujete. Naším cílem je, aby každý student měl přístup ke kvalitním materiálům bez ohledu na to, odkud pochází nebo jakého oboru se týkají. </p>
+      </div>
     </div>
   </body>
 </html>
