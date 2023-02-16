@@ -1,14 +1,6 @@
-@use "variables";
-
 .container {
    &_login {
-      border:1px solid black;
-      border-radius: 7px;
-      padding: 2rem;
-      margin-bottom: 15rem;
-   }
-   h2{
-      color: variables.$primary-text;
+
    }
 }
 .login {
@@ -16,7 +8,6 @@
    display:flex;
    justify-content: center;
    align-items:center;
-   flex-direction: column;
 }
 #login_form, #register_form, [name = "register_form"] {
 

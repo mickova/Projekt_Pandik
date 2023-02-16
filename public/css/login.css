@@ -4,6 +4,7 @@
   padding: 2rem;
   margin-bottom: 15rem;
 }
+
 .container h2 {
   color: #202020;
 }
@@ -15,7 +16,6 @@
   align-items: center;
   flex-direction: column;
 }
-
 #login_form div, #register_form div, [name=register_form] div {
   display: flex;
   justify-content: space-between;
