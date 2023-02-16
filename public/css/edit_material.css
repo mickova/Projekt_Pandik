@@ -1,7 +1,8 @@
 .container_edit-material button {
-  margin-left: 1rem;
+  margin: auto;
 }
 .container_edit-material #back button {
   margin-top: 3rem;
   cursor: pointer;
+  margin-left: 1rem;
 }/*# sourceMappingURL=edit_material.css.map */

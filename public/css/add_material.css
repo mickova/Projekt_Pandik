@@ -23,6 +23,7 @@
   font-size: 1.5rem;
   padding: 0.5rem 0;
   justify-content: center;
+  text-align: center;
 }
 #material_form div input, #material_form div select {
   margin-left: 1rem;
