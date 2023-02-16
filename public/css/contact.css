@@ -64,6 +64,12 @@
   resize: none;
 }
 .container_message button {
-  margin: 1rem;
+  margin: 1rem 1.75rem 1rem 1rem;
   float: right;
+}
+
+#submit {
+  display: flex;
+  width: 100%;
+  justify-content: end;
 }/*# sourceMappingURL=contact.css.map */
