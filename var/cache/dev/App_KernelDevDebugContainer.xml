@@ -3179,7 +3179,7 @@
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.n9reSE4"/>
+        <argument type="service" id=".security.request_matcher.44K8XT6"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
         </argument>
@@ -3828,12 +3828,12 @@
         <argument type="service" id=".security.request_matcher.AA_1Teq"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.EsKLO4R" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/consent/[0-9]</argument>
+    <service id=".security.request_matcher..iRejvj" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/consent</argument>
     </service>
-    <service id=".security.request_matcher.n9reSE4" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.44K8XT6" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.EsKLO4R"/>
+        <argument type="service" id=".security.request_matcher..iRejvj"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
