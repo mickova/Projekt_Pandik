@@ -26,7 +26,7 @@ class ContactPageController extends AbstractController
          $msg = wordwrap($msg, 70);
 
          // send email
-         mail("matyaslorenz@seznam.cz", $form->getData()["email"], $msg);
+         mail("matyaslorenz@seznam.cz", $form->getData()["email"], $msg, "Pandik_user");
       }
       if ($security->getUser() != null) {
          return $this->render('html/contact.html.twig', [

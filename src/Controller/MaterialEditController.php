@@ -15,7 +15,6 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class MaterialEditController extends AbstractController
 {
-
    #[Route('/edit_material/{id}', name: "edit_material", methods: ['GET', 'POST'])]
    public function new(int $id, ManagerRegistry $doctrine, Request $request, Security $security,  SluggerInterface $slugger)
    {
