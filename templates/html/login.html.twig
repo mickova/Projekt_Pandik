@@ -2,9 +2,11 @@
 <html lang="en">
   {% include "html/head.html.twig" %}
   <body>
-    <h1>Login</h1>
     {% include "html/menu_not_logged.html.twig" %}
     <main>
+      {% if error %}
+      {{error}}
+    {% endif %}
       <div class="container login">
         <div class="container_login">
           {{ form_start(LoginForm) }}

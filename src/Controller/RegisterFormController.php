@@ -28,14 +28,24 @@ class RegisterFormController extends AbstractController
          $user->setEmail($data["email"]);
          $plaintextPassword = $data["password"];
          $confirm_pass = $data["password_confirm"];
-         if ($repository->findBy(['username' => $data["username"]])) {
+         if(strlen($data["user"]) <= 3) {
+            return $this->render("html/register.html.twig", [
+               'RegisterForm' => $form->createView(),
+               'ErrorMessUsername' => "Vaše jméno musí mít nejméně čtyři znaky"
+            ]);
+         }
+         if ($repository->findOneBy(['username' => $data["username"]])) {
             return $this->render("html/register.html.twig", [
                'RegisterForm' => $form->createView(),
                'ErrorMessUsername' => "Vaše jméno je již zabráno"
             ]);
-            return;
          }
-         
+         if(strlen($plaintextPassword) <=4) {
+            return $this->render("html/register.html.twig", [
+               'RegisterForm' => $form->createView(),
+               'ErrorMessPassword' => "Vaše heslo je příliš krátké. Musí obsahovat nejméně pět znaků."
+            ]);
+         } 
          if($plaintextPassword !=$confirm_pass) {
             return $this->render("html/register.html.twig", [
                'RegisterForm' => $form->createView(),

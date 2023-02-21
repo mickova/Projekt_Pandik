@@ -12,9 +12,14 @@
           <a href="/settings"> <button class=""> Nastavení </button> </a>
         </div>
         <div class="container_materials">
+			<p> 
+			{{profile_desc}}
+		</p>
+			{% if materials %}
 					<h2>
 						Příspěvky uživatele
 					</h2>
+			{% endif %}
 					{% for value in materials %}
           <div class="container_materials_single-material">
 						Předmět :
