@@ -11,8 +11,6 @@ class SettingsUsernameType extends AbstractType
 {
    public function buildForm(FormBuilderInterface $builder, array $options)
    {
-      $builder
-         ->add('password', PasswordType::class, array('required' => false, "label" => "Současné heslo"))
-         ->add('username', TextType::class, array('required' => false, "label" => "Nové jméno"));
+      $builder->add('username', TextType::class, array('required' => false, "label" => "Nové jméno"));
    }
 }
