@@ -50,7 +50,7 @@ nav {
    &_heading{
       margin: auto;
       font-size: 2rem;
-      width: 25rem;
+      width: 20rem;
       text-align: center;
    }
 }
@@ -77,10 +77,10 @@ nav {
 button {
    width:125px;
    height:40px;
-   background-color: #154089;
+   background-color: #5883cc;
    color: variables.$terciary-color;
-   border:solid 1px black;
-   border-radius: 5px;
+   border:solid 2px rgba($color: #000000, $alpha: 0.25);
+   border-radius: 7px;
    font-size:1.25rem;
 }
 
