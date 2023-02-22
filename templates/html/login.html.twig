@@ -4,20 +4,28 @@
   <body>
     {% include "html/menu_not_logged.html.twig" %}
     <main>
-      {% if error %}
-      {{error}}
-    {% endif %}
+
+    
       <div class="container login">
-        <div class="container_login">
-          {{ form_start(LoginForm) }}
-          {{ form_widget(LoginForm) }}
-          <div class="container_login_info">
-            <a> Zapomněli jste heslo? </a> <br />
-            <button type="submit" class="button">Přihlásit!</button>
+        <div class="login_body">
+        <h1>Přihlašte se</h1>
+          <div class="container_login">
+
+            {{ form_start(LoginForm) }}
+            {{ form_widget(LoginForm) }}
+            {% if error %}
+                {{error | raw}}
+                {% endif %}
+            <div class="container_login_info">
+              
+              <a> Zapomněli jste heslo? </a> <br />
+              <button type="submit" class="button">Přihlásit!</button>
+            </div>
+            {{ form_end(LoginForm) }}
           </div>
-          {{ form_end(LoginForm) }}
         </div>
       </div>
     </main>
+    {% include "html/footer.html.twig" %}
   </body>
 </html>

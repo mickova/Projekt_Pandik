@@ -1,10 +1,19 @@
-
+@use "variables";
 .login {
+   
    height:calc(100vh - 66px);
    display:flex;
+   flex-direction: column;
    justify-content: center;
    align-items:center;
+   background-image: linear-gradient(to bottom left, variables.$secondary-color, variables.$terciary-color);
 }
+
+h1{
+   font-weight: 100;
+   text-align: center;  
+}
+
 #login_form, #register_form, [name = "register_form"] {
 
    div {
@@ -15,26 +24,59 @@
 
    input {
       height:35px;
-      width:250px;
+      width:270px;
    }
+   
    
    label {
       margin-top:0.5rem;
       padding-right:2rem;
    }
+
 }
+
+
+
 [name = "login_form"] {
    a {
       float:right;
       margin-right:1rem;
+      margin-bottom: 4vh;
+      color: rgb(80, 80, 255);
    }
 }
+.container_login {
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 25px 20px 25px 20px;
+   height: 38vh;
+   width: 65vh;
+   border-radius: 7px;
+   /*background-color: rgba($color: #aeb0c5, $alpha: 0.8);*/
+   border: 3px solid rgba($color: #ffffff, $alpha: 0.5);
+   background-color: rgba(variables.$primary-color,0.10);
+   backdrop-filter: blur(10px);
+
+   p {
+      margin-top: 0;
+      text-align: right;
+      color: rgb(181, 4, 37);
+      padding-right:1rem;
+   }
+}
+
+
+
 .container_login_info {
    display:flex;
    flex-direction: column;
    align-items:end;
 
+
    button {
       margin-right:1rem;
    }
+
 }
