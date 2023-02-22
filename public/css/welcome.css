@@ -1,6 +1,33 @@
 .container_welcome {
-  margin-left: 2rem;
+  background-image: linear-gradient(to bottom left, #95B4EE, #E8E9F3);
 }
 .container_welcome_info {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  min-height: 50vh;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.container_welcome_hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline: 3rem;
+}
+.container_welcome_hero img {
+  border: 2px solid black;
+  border-radius: 40%;
+  -webkit-clip-path: circle(40% at 50% 50%);
+  clip-path: circle(40% at 50% 50%);
+}
+.container_welcome_hero p {
+  font-size: 1.5rem;
+}
+.container_welcome_hero_heading {
+  font-size: 3rem;
+  margin: auto;
+  text-align: left;
 }/*# sourceMappingURL=welcome.css.map */
