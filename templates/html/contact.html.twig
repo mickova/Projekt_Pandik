@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-image: linear-gradient(to bottom left, #95B4EE, #E8E9F3) !important;">
   {% include "html/head.html.twig" %}
-  <body>
+  <body style="background-color: transparent !important;">
    {% if not logged %} {% include
       "html/menu_not_logged.html.twig" %} {% endif %}
    {% if logged %} {% include
       "html/menu.html.twig" %} {% endif %}
-    <main>
-      <div class="container">
+    <main style="background-color: transparent !important;"> 
+      <div class="container" style="background-color: transparent !important;" >
         <div class="container_upper">
           <div class="container_upper_text">
             <h1>Tento web pro vás vytvořili a spravují</h1>
@@ -39,7 +39,7 @@
                   src="https://media.discordapp.net/attachments/1068461341519654912/1075824377825853450/image.png"
                 />
               </div>
-              <h3>Čoltěch Vojtovský</h3>
+              <h3>Voltěch Čalkovský</h3>
             </div>
             <div class="card">
               <div class="photo">
@@ -73,6 +73,7 @@
         </div>
       </div>
     </main>
+    {% include "html/footer.html.twig" %}
   </body>
-  {% include "html/footer.html.twig" %}
+  
 </html>
