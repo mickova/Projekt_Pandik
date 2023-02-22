@@ -14,7 +14,7 @@ nav {
   display: flex;
   flex-direction: row;
   height: 65px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   background-color: #5386E4;
 }
 nav p {
@@ -32,6 +32,19 @@ nav_icon {
 }
 nav_heading_navbar {
   font-size: 2rem;
+}
+
+.nav_not-logged_link-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.nav_not-logged_heading {
+  margin: auto;
+  font-size: 2rem;
+  width: 20rem;
+  text-align: center;
 }
 
 .container {
