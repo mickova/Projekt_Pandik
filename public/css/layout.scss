@@ -50,7 +50,7 @@ nav {
    &_heading{
       margin: auto;
       font-size: 2rem;
-      width: 20rem;
+      width: 25rem;
       text-align: center;
    }
 }
@@ -98,4 +98,17 @@ button {
 
 .--mt1 {
 margin-top:1rem;
+}
+footer{
+   position:absolute;
+   width:100%;
+   background-color: variables.$primary-color;
+   border-top: 2px solid black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   p,a {
+      margin: 0.2rem auto 0.2rem auto;
+   }
+
 }
