@@ -5,6 +5,8 @@ aside {
    width:calc(350px);
    min-height:calc(100% - 65px);
    border-right: solid 1px black;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
    ul {
       padding:2rem 0 0 0;
       margin:0;
@@ -13,8 +15,10 @@ aside {
       li {
          color: black;
          font-size:1.25rem;
-         text-align:center;
-         padding:0.3rem 0;
+         text-align:left;
+         padding:0.6rem 0;
+         text-decoration: underline;
+         margin-left: 1.5rem;
       }
    }
 }
