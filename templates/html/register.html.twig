@@ -4,24 +4,29 @@
   <body>
     {% include "html/menu_not_logged.html.twig" %}
     <main>
-      <h1> Registrace </h1>
       <div class="container login">
-        <div class="container_login">
-          {{ form_start(RegisterForm) }}
-          {{ form_row(RegisterForm.email) }}
-          {{ form_row(RegisterForm.username) }}
-          {% if ErrorMessUsername is defined %}
-          <div class="error_mess">{{ ErrorMessUsername }}</div>
-          {% endif %}
-          {{ form_row(RegisterForm.password) }}
-          {% if ErrorMessPassword is defined %}
-          <div class="error_mess">{{ ErrorMessPassword }}</div>
-          {% endif %}
-          {{ form_row(RegisterForm.password_confirm) }}
-          <div class="container_login_info">
-            <button type="submit" class="button">Registrovat!</button>
+        <div class="login_body">
+          <h1> Registrace </h1>
+          <div class="container_login">
+            {{ form_start(RegisterForm) }}
+            {{ form_row(RegisterForm.email) }}
+            {{ form_row(RegisterForm.username) }}
+            {% if ErrorMessUsername is defined %}
+            <div class="error_mess">{{ ErrorMessUsername}}</div>
+            {% endif %}
+            {{ form_row(RegisterForm.password) }}
+            {% if ErrorMessPassword is defined %}
+            <div class="error_mess">{{ ErrorMessPassword}}</div>
+            {% endif %}
+            {{ form_row(RegisterForm.password_confirm) }}
+            {% if ErrorMessPassword2 is defined %}
+            <div class="error_mess">{{ ErrorMessPassword2}}</div>
+            {% endif %}
+            <div class="container_login_info">
+              <button type="submit" class="button" id="register_button">Registrovat!</button>
+            </div>
+            {{ form_end(RegisterForm) }}
           </div>
-          {{ form_end(RegisterForm) }}
         </div>
       </div>
     </main>

@@ -68,7 +68,6 @@ nav {
    }
 }
 
-
 .material-source-link{
    text-decoration: underline;
    color: variables.$primary-text;
@@ -85,8 +84,9 @@ button {
 }
 
 .error_mess {
-   color:red;
-   font-size:0.75rem;
+   text-align: right;
+   justify-content: end !important;
+   color: rgb(181, 4, 37);
 }
 .--with_aside {
    display: flex;

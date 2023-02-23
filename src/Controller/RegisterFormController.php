@@ -28,7 +28,7 @@ class RegisterFormController extends AbstractController
          $user->setEmail($data["email"]);
          $plaintextPassword = $data["password"];
          $confirm_pass = $data["password_confirm"];
-         if(strlen($data["user"]) <= 3) {
+         if(strlen($data["username"]) <= 3) {
             return $this->render("html/register.html.twig", [
                'RegisterForm' => $form->createView(),
                'ErrorMessUsername' => "Vaše jméno musí mít nejméně čtyři znaky"
@@ -49,7 +49,7 @@ class RegisterFormController extends AbstractController
          if($plaintextPassword !=$confirm_pass) {
             return $this->render("html/register.html.twig", [
                'RegisterForm' => $form->createView(),
-               'ErrorMessPassword' => "Vaše hesla se neshodují"
+               'ErrorMessPassword2' => "Vaše hesla se neshodují"
             ]);
          }
          

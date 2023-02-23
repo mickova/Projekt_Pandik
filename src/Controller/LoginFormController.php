@@ -20,7 +20,7 @@ class LoginFormController extends AbstractController
       $form = $this->createForm(LoginFormType::class);
       $form->handleRequest($request);
       if($error != null || $error!= "") {
-         $error = "<p> Nesprávné údaje </p>";
+         $error = "Nesprávné údaje";
       }
 
       if ($form->isSubmitted() && $form->isValid()) {
