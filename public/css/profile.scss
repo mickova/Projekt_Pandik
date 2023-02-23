@@ -11,7 +11,8 @@
 
       &_header {
          display:flex;
-         
+         background-color: variables.$secondary-color;
+         border-bottom: 1px solid black;
          h1 {
             padding-left:2rem;
             padding-top:1rem;

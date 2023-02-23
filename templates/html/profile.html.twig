@@ -22,22 +22,23 @@
 			{% endif %}
 					{% for value in materials %}
           <div class="container_materials_single-material">
-						Předmět :
-						{{ value.getSchoolSubject() }}<br/>
-						Datum:
+		  	<div class="single-material_content">
+						<p>Předmět :
+						{{ value.getSchoolSubject() }}</p>
+						<p>Datum:
 					{{ value.getDate() }}
-					<br/>
-						Obsah:<a class="material-source-link" href="material/{{value.getFilename()}}"/>
+					</p>
+						<p>Obsah:<a class="material-source-link" href="material/{{value.getFilename()}}"/>
 						Zde
-					</a>
-					<br/>
+					</a></p>
+					
 					{% if (value.getUser().getId() == id ) %}
-						<a class="material-source-link" href="/edit_material/{{ value.getId() }}">
+						<p><a class="material-source-link" href="/edit_material/{{ value.getId() }}">
 							Upravit
 						</a>
-						<br/>
+						</p>
 					{% endif %}
-					<br/>
+					</div>
           </div>
 				{% endfor %}
           </div>
