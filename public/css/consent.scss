@@ -1,0 +1,17 @@
+@use "variables";
+
+.whole_consent_container{
+    background-image: linear-gradient(to bottom left, variables.$secondary-color, variables.$terciary-color);
+}
+
+.consent_container{
+    margin: 0 10vw 0 10vw; 
+
+    .list_header{
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin-top: 2px;
+    }
+}
