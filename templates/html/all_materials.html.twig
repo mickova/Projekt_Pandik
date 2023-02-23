@@ -39,20 +39,20 @@
 				</h2>
 			</div>
             <div class="single-material_content">
-            Předmět :
-            {{ value.getSchoolSubject() }}<br/>
-            Datum:
-        {{ value.getDate() }}
+            <p>Předmět :
+            {{ value.getSchoolSubject() }}</p><br/>
+            <p>Datum:
+        {{ value.getDate() }}</p>
         <br/>
-            Obsah:<a class="material-source-link" href="materials/{{value.getFilename()}}"/>
+            <p>Obsah:<a class="material-source-link" href="materials/{{value.getFilename()}}"/>
             Zde
-        </a>
+        </a></p>
         </div>
         <br/>
         {% if (value.getUser().getId() == id ) %}
-            <a class="material-source-link" href="edit_material/{{ value.getId() }}">
+            <br><p><a class="material-source-link" href="edit_material/{{ value.getId() }}">
                 Upravit
-            </a>
+            </a></p>
             
         {% endif %}
 </div>
@@ -71,20 +71,20 @@
         </h2>
     </div>
     <div class="single-material_content">
-        Předmět :
-        {{ value.getSchoolSubject() }}<br/>
-        Datum:
-    {{ value.getDate() }}
-    <br/>
-        Obsah:<a class="material-source-link" href="materials/{{value.getFilename()}}"/>
+        <p>Předmět :
+        {{ value.getSchoolSubject() }}</p>
+        <p>Datum:
+    {{ value.getDate() }}</p>
+    
+        <p>Obsah:<a class="material-source-link" href="materials/{{value.getFilename()}}"/>
         Zde
-    </a>
-    <br/>
+    </a></p>
+    
     
     {% if (value.getUser().getId() == id ) %}
-        <a class="material-source-link" href="edit_material/{{ value.getId() }}">
+        <br><p><a class="material-source-link" href="edit_material/{{ value.getId() }}">
             Upravit
-        </a>
+        </a></p>
     {% endif %}
     </div>
 </div>
