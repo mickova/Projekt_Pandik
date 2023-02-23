@@ -3,8 +3,7 @@
   height: 100%;
   background-image: linear-gradient(to bottom left, #95B4EE, #E8E9F3);
 }
-
-h1 {
+.container_help_header {
   margin: 0;
   padding-top: 2vh;
   margin-bottom: 5vh;

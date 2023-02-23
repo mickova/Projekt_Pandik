@@ -11,7 +11,7 @@
 					<h1 id="profile_name">{{ profile_name }}</h1>
           <a href="/settings"> <button class=""> Nastavení </button> </a>
         </div>
-        <div class="container_materials">
+        <div class="container_profile_materials">
 			<p> 
 			{{profile_desc}}
 		</p>
@@ -21,7 +21,7 @@
 					</h2>
 			{% endif %}
 					{% for value in materials %}
-          <div class="container_materials_single-material">
+          <div class="container_profile_materials_single-material">
 		  	<div class="single-material_content">
 						<p>Předmět :
 						{{ value.getSchoolSubject() }}</p>
