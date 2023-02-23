@@ -1,3 +1,13 @@
 .container_short-info {
   padding-left: 2rem;
+}
+.container_short-info h1 {
+  font-size: 2.5rem;
+}
+.container_short-info a {
+  font-size: 1.2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #95B4EE;
 }/*# sourceMappingURL=homepage.css.map */
