@@ -55,13 +55,39 @@ nav_heading_navbar {
   margin-left: 2rem;
 }
 .container_materials_single-material {
-  margin: 1.5rem 2rem 1.5rem 0;
+  margin: 1.5rem 10rem 1.5rem 5rem;
   border: 1px solid black;
 }
 
-.material-source-link {
+.single-material_header {
+  border-bottom: 1px solid black;
+  width: 100%;
+  background-color: #95B4EE;
+}
+.single-material_header .author_name {
+  font-size: 1.25rem;
+  padding: 1rem;
+  margin: 0;
   text-decoration: underline;
+}
+
+.single-material_content {
+  padding: 0.5rem 1rem;
+}
+.single-material_content p {
+  margin: 0.5rem auto;
+}
+.single-material_content p a {
+  margin-inline: 0.5rem;
+  padding: 2px;
+  background-color: #95B4EE;
+}
+
+.material-source-link {
+  border: 1px solid black;
+  border-radius: 5px;
   color: #202020;
+  padding: 1px;
 }
 
 button {
