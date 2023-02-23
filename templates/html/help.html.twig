@@ -1,6 +1,31 @@
 <html>
 {% include "html/head.html.twig" %}
 {% include "html/menu.html.twig" %}
-<h1> Nápověda </h1>
+<body>
+<main>
+    <div class="container_help">
+        <h1> Nápověda </h1>
+        <div id = "help_container">
+            <button type="button" class="collapsible">Přidání nového materiálu</button>
+                <div class="content">
+                <p>Pokud chcete přidat nový materiál, přejděte na stránku Přidat materiál v horní liště. Zde můžete nahrát svůj materiál ve formě souboru PDF, Poté je nutné vyplnit název maturitního předmětu. Na konci klikněte na tlačítko "Přidat příspěvek" a váš materiál bude přidán do systému.</p>
+                </div>
+            <button type="button" class="collapsible">Změna údajů o sobě</button>
+                <div class="content">
+                <p>Pro změnu údajů o sobě (např. jména, hesla atd.) klikněte na odkaz "Nastavení" v horní nabídce stránky. Zde můžete upravit své osobní údaje, změnit jméno a změnit heslo. Pokud chcete změnit své jméno, tak v poli "Nové jméno" napište nové jméno a klikněte na tlačítko  "Nastavit" (v případě změny hesla je to podobný postup) a vaše údaje budou aktualizovány.</p>
+                </div>
+            <button type="button" class="collapsible">Filtrování příspěvků</button>
+                <div class="content">
+                <p>Pro filtrování příspěvků podle témat, která vás zajímají, můžete použít vyhledávací pole v horní části stránky nebo procházet kategorie podle názvů v levé liště. V případě filtrování vybere školní předmět a dáte tlačítko filtrovat. Chcete-li příspěvky filtrovat podle data, tak musíte vybrat školní předmět a vlevo nastavit datum od a do. V případě problémů nás můžete kontaktovat pomocí formuláře na stránce "Kontakt" v horní liště.</p>
+                </div>
+        </div>
+    </div>
+</main>
 {% include "html/footer.html.twig" %}
+{% block js_help %}
+
+<script src="js/help_script.js"></script>
+
+{% endblock js_help %}
+<body>
 </html>

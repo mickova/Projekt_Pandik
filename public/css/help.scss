@@ -1,0 +1,58 @@
+@use "variables";
+
+.container_help {
+    margin-top:0;
+    height:100%;
+    background-image: linear-gradient(to bottom left, variables.$secondary-color, variables.$terciary-color);
+}
+
+h1 {
+    margin:0;
+    padding-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  
+  #help_container {
+    margin: 0 10vh 0 10vh;
+
+    p{
+        margin-bottom: 3rem;
+    }
+
+}
+
+  #help_container .collapsible {
+      background-color: rgba(255, 255, 255, 0);
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid black;
+      border-radius: 0;
+  
+      margin-bottom: 1vh;
+  
+      text-align: left;
+      font-size: 18px;
+      line-height: 10px;
+      font-weight:lighter
+
+    }
+    
+    #help_container .collapsible:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    #help_container .active {
+        background-color: variables.$secondary-color;
+    }
+
+  #help_container .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.30);
+    margin-bottom: 1vh; 
+  }
