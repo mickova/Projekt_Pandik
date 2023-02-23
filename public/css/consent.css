@@ -1,0 +1,13 @@
+.whole_consent_container {
+  background-image: linear-gradient(to bottom left, #95B4EE, #E8E9F3);
+}
+
+.consent_container {
+  margin: 0 10vw 0 10vw;
+}
+.consent_container .list_header {
+  margin-bottom: 0;
+}
+.consent_container ul {
+  margin-top: 2px;
+}/*# sourceMappingURL=consent.css.map */
