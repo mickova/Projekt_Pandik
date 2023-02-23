@@ -6,6 +6,8 @@
 }
 .container_profile-card_header {
   display: flex;
+  background-color: #95B4EE;
+  border-bottom: 1px solid black;
 }
 .container_profile-card_header h1 {
   padding-left: 2rem;
