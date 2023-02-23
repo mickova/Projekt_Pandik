@@ -4,17 +4,15 @@
   <body>
     {% include "html/menu_not_logged.html.twig" %}
     <main>
-
-    
       <div class="container login">
         <div class="login_body">
-        <h1>Přihlašte se</h1>
+        <h1>Přihlášení</h1>
           <div class="container_login">
 
             {{ form_start(LoginForm) }}
             {{ form_widget(LoginForm) }}
             {% if error %}
-                {{error | raw}}
+                <div class="error_mess" id="login_error_mess"> {{error}}</div>
                 {% endif %}
             <div class="container_login_info">
               

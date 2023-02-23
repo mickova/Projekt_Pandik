@@ -12,6 +12,12 @@ h1 {
   text-align: center;
 }
 
+#login_error_mess {
+  margin-bottom: 2vh;
+  margin-top: 0;
+  padding-right: 1rem;
+}
+
 #login_form div, #register_form div, [name=register_form] div {
   display: flex;
   justify-content: space-between;
@@ -24,6 +30,11 @@ h1 {
 #login_form label, #register_form label, [name=register_form] label {
   margin-top: 0.5rem;
   padding-right: 2rem;
+}
+
+#register_button {
+  margin-top: 40px;
+  margin-right: 0;
 }
 
 [name=login_form] a {
@@ -41,17 +52,8 @@ h1 {
   height: 38vh;
   width: 65vh;
   border-radius: 7px;
-  /*background-color: rgba($color: #aeb0c5, $alpha: 0.8);*/
   border: 3px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(83, 134, 228, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-.container_login p {
-  margin-top: 0;
-  text-align: right;
-  color: rgb(181, 4, 37);
-  padding-right: 1rem;
 }
 
 .container_login_info {
