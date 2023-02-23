@@ -27,6 +27,7 @@ nav {
       a {
          text-decoration: none;
          color: black;
+
       }
    }
    &_icon {
@@ -59,6 +60,7 @@ nav {
    background-color: variables.$terciary-color;
 
    &_materials {
+      padding-top: 4vh;
       margin-left:2rem;
 
       &_single-material {
@@ -88,6 +90,7 @@ nav {
       a{
          margin-inline: 0.5rem;
          padding: 2px;
+         padding-right: 7px;
          background-color: variables.$secondary-color;
       }
    }
@@ -95,7 +98,7 @@ nav {
 
 .material-source-link{
    border: 1px solid black;
-   border-radius: 5px;
+   border-radius: 3px;
    color: variables.$primary-text;
    padding: 1px;
 }

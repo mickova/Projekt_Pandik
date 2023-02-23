@@ -2,6 +2,9 @@
   padding-left: 2rem;
   text-align: center;
 }
+.form_add-material h1 {
+  padding-bottom: 3vh !important;
+}
 
 [name|=material_form] {
   display: flex;
