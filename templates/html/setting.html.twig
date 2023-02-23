@@ -12,7 +12,7 @@
           <div class="container_profile_content">
             {% if error is defined %}
               {% if error %}
-                {{ error }}
+                <div class="error_mess">{{ error }}</div>
               {% endif %}
             {% endif %}
             {{ form_start(settings) }}
