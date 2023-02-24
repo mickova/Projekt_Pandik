@@ -6,6 +6,7 @@ return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'consent' => [[], ['_controller' => 'App\\Controller\\ConsentController::help'], [], [['text', '/consent']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactPageController::contact'], [], [['text', '/contact']], [], [], []],
+    'password' => [[], ['_controller' => 'App\\Controller\\ForgotPasswordController::contact'], [], [['text', '/password-reset']], [], [], []],
     'help' => [[], ['_controller' => 'App\\Controller\\HelpPageController::help'], [], [['text', '/help']], [], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomePageController::homepage'], [], [['text', '/homepage']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::new'], [], [['text', '/login']], [], [], []],

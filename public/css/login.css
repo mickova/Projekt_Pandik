@@ -18,16 +18,16 @@ h1 {
   padding-right: 1rem;
 }
 
-#login_form div, #register_form div, [name=register_form] div {
+#login_form div, #register_form div, [name=register_form] div, [name=password_reset] div {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
 }
-#login_form input, #register_form input, [name=register_form] input {
+#login_form input, #register_form input, [name=register_form] input, [name=password_reset] input {
   height: 35px;
   width: 270px;
 }
-#login_form label, #register_form label, [name=register_form] label {
+#login_form label, #register_form label, [name=register_form] label, [name=password_reset] label {
   margin-top: 0.5rem;
   padding-right: 2rem;
 }

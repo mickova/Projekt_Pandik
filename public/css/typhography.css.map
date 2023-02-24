@@ -1,1 +1,1 @@
-{"version":3,"sources":["typhography.scss","variables.scss","typhography.css"],"names":[],"mappings":"AAEA;EACG,cCGY;EDFZ,qBAAA;AEDH;AFEG;EACG,cAAA;AEAN;AFIG;EACG,eAAA;AEFN;;AFMA;EACG,0BAAA;AEHH;;AFKA;EACG,cCbY;ACWf","file":"typhography.css"}
+{"version":3,"sources":["typhography.scss","variables.scss","typhography.css"],"names":[],"mappings":"AAEA;EACG,cCGY;EDFZ,qBAAA;AEDH;AFEG;EACG,cAAA;AEAN;AFIG;EACG,eAAA;AEFN;;AFMA;EACG,0BAAA;AEHH;;AFKA;EACG,cCbY;ACWf;;AFKA;EACG,6BAAA;AEFH","file":"typhography.css"}

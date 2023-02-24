@@ -20,7 +20,7 @@ h1{
    padding-right:1rem;
 }
 
-#login_form, #register_form, [name = "register_form"] {
+#login_form, #register_form, [name = "register_form"], [name = "password_reset"] {
 
    div {
       display:flex;
