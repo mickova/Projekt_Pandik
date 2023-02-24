@@ -9,12 +9,12 @@
           <div class="container_profile_header">
             <h1>Nastavení</h1>
           </div>
+          {% if error is defined %}
+          {% if error %}
+            <div class="error_mess --text-center --mt1 --font">{{ error }}</div>
+          {% endif %}
+        {% endif %}
           <div class="container_profile_content">
-            {% if error is defined %}
-              {% if error %}
-                <div class="error_mess">{{ error }}</div>
-              {% endif %}
-            {% endif %}
             {{ form_start(settings) }}
             <h2> Změnit jméno </h2>
             {{ form_widget(settings) }}
